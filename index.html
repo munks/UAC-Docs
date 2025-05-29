@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Duality">
+		<meta name="description" content="HTML5 Test">
+		<title>HTML</title>
+		<style>
+			html, body {
+				width: 99%;
+				height: 99%;
+			}
+			#Title {
+				font-size: 2em;
+				text-align: center;
+				height: 8%;
+				line-height: 100%;
+			}
+			details, .Selector {
+				padding-left: 1em;
+			}
+			.ListTitle {
+				padding: 0em 1em 0em 1em;
+			}
+			summary:hover, .Selector:hover {
+				background: #c0ffc0;
+			}
+			#Container {
+				width: 100%;
+				height: 90%;
+			}
+			#Container > div {
+				float: left;
+				border: 1px solid;
+				overflow: auto;
+			}
+			#List {
+				width: 25%;
+				height: 100%;
+			}
+			#Data {
+				height: 100%;
+				width: 73%;
+			}
+			#ViewFrame {
+				padding: 1em 1em 1em 1em;
+			}
+		</style>
+		<script>
+			let xhttp = new XMLHttpRequest();
+			
+			xhttp.open("GET", "data.json", true);
+			xhttp.onreadystatechange = function() {
+			  if(this.readyState == 4 && this.status == 200) {
+				let storage = JSON.parse(this.response);
+				document.getElementById('ViewFrame').innerHTML = storage.data;
+			  }
+			};
+			xhttp.send();
+			
+			function getData (data) {
+				document.getElementById('ViewFrame').innerHTML = data;
+			}
+		</script>
+	</head>
+	<body>
+		<header id="Title">
+			Test Document
+		</header>
+		<div id="Container">
+			<div id="List">
+				<details class="ListTitle">
+					<summary>A</summary>
+					<details>
+						<summary>B</summary>
+						<div class="Selector" onclick="getData('a')">C</div>
+					</details>
+					<details>
+						<summary>B</summary>
+						<div class="Selector" onclick="getData('b')">C</div>
+					</details>
+				</details>
+			</div>
+			<div id="Data">
+				<div id="ViewFrame"></div>
+			</div>
+		</div>
+	</body>
+</html>
