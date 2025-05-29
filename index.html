@@ -48,20 +48,39 @@
 		</style>
 		<script>
 			let xhttp = new XMLHttpRequest();
+			let storage;
+			let list;
 			
-			xhttp.open("GET", "data.json", true);
-			xhttp.onreadystatechange = function() {
-			  if(this.readyState == 4 && this.status == 200) {
-				let storage = JSON.parse(this.response);
-				let text;
-				
-				for (i in storage.data) {
-					text =+ storage.data[i];
-				}
-				document.getElementById('ViewFrame').innerHTML = text;
-			  }
-			};
-			xhttp.send();
+			window.onload = function () {
+				list = document.getElementById("List");
+				xhttp.open("GET", "data.json", true);
+				xhttp.onreadystatechange = function() {
+					if(this.readyState == 4 && this.status == 200) {
+						storage = JSON.parse(this.response);
+						
+						for (i in storage.data) {
+							let title = document.createElement("details");
+							let item = document.createElement("summary");
+							
+							title.className = "ListTitle";
+							item.append(storage.data[i]);
+							
+							title.appendChild(item);
+							
+							for (j in storage.data[i]) {
+								let name = document.createElement("div");
+								name.className = "Selector";
+								name.append(j);
+								name.addEventListener("click", ()=>{getData(j)});
+								
+								title.appendChild(name);
+							}
+							list.append(title);
+						}
+					}
+				};
+				xhttp.send();
+			}
 			
 			function getData (data) {
 				document.getElementById('ViewFrame').innerHTML = data;
@@ -74,17 +93,6 @@
 		</header>
 		<div id="Container">
 			<div id="List">
-				<details class="ListTitle">
-					<summary>A</summary>
-					<details>
-						<summary>B</summary>
-						<div class="Selector" onclick="getData('a')">C</div>
-					</details>
-					<details>
-						<summary>B</summary>
-						<div class="Selector" onclick="getData('b')">C</div>
-					</details>
-				</details>
 			</div>
 			<div id="Data">
 				<div id="ViewFrame"></div>
