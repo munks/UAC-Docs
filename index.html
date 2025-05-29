@@ -53,7 +53,12 @@
 			xhttp.onreadystatechange = function() {
 			  if(this.readyState == 4 && this.status == 200) {
 				let storage = JSON.parse(this.response);
-				document.getElementById('ViewFrame').innerHTML = storage.data;
+				let text;
+				
+				for (i in storage.data) {
+					text =+ storage.data[i];
+				}
+				document.getElementById('ViewFrame').innerHTML = text;
 			  }
 			};
 			xhttp.send();
