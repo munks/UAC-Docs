@@ -18,7 +18,7 @@
 				"Ranged": 18,
 				"Spell": 10,
 				"Range": 1,
-				"Type": "Plasma"
+				"Type": "Plasma",
 				"Kind": "PlasmaInducer"
 			},
 			"GasCompressor": {
