@@ -63,15 +63,15 @@
 							let item = document.createElement("summary");
 							
 							title.className = "ListTitle";
-							item.append(storage.data[i]);
+							item.append(i);
 							
 							title.appendChild(item);
 							
-							for (j in storage.data[i]) {
+							for (j in i) {
 								let name = document.createElement("div");
 								name.className = "Selector";
 								name.append(j);
-								name.addEventListener("click", ()=>{getData(j)});
+								name.addEventListener("click", ()=>{getData(j.toString())});
 								
 								title.appendChild(name);
 							}
