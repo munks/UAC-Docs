@@ -52,7 +52,7 @@
 			},
 			"AimAssistant": {
 				"AttackSpeed": 20,
-				"Range": 1
+				"Range": 1,
 				"Type": "All"
 			},
 			"KineticIntegrator": {
