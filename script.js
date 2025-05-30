@@ -43,7 +43,11 @@ window.onload = function () {
 					let name = document.createElement("div");
 					name.className = "Selector";
 					name.id = i.toString() + "/" + j.toString();
-					name.append(storage[lang][j].toString());
+					if (storage[lang][j] != null) {
+						name.append(storage[lang][j].toString());
+					} else {
+						name.append(storage.data[i][j]);
+					}
 					name.addEventListener("click", (e)=>{ getData(e.target.id); });
 					
 					title.appendChild(name);
