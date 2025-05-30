@@ -62,9 +62,15 @@
 		}
 	},
 	"koKR": {
+		"Ranged": "공격력",
+		"Spell": "폭발 피해",
+		"AttackSpeed": "공격 속도",
+		"Range": "사거리",
+		"Kind": "동시 착용 불가",
 		"Item_Accessary": "아이템/액세서리",
 		"Birdshot": "버드샷",
 		"Slug": "슬러그탄",
+		"SlugSpecial": "거리당 피해 감소 페널티 - 25%<br>방사 피해 범위 대폭 감소",
 		"TokamakPlasmaCompressor": "토카막 플라스마 압축기",
 		"GasCompressor": "가스 압축기",
 		"PlasmaInducer": "플라스마 유도기",
