@@ -123,7 +123,9 @@
 						case 'Kind':
 							idx = 0;
 							text += "<br>" + storage[lang][i] + ": ";
+							console.log("a: " + storage[lang][i]);
 							for (t in storage.data[c[0]][c[1]][i]) {
+								console.log("b: " + t);
 								if (idx != 0) {
 									text += ", ";
 								}
