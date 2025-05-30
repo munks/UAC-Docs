@@ -86,7 +86,7 @@
 								let name = document.createElement("div");
 								name.className = "Selector";
 								name.id = i.toString() + "/" + j.toString();
-								name.append(storage[lang][j].toString());
+								name.append(storage[lang][j]);
 								name.addEventListener("click", ()=>{getData()});
 								
 								title.appendChild(name);
