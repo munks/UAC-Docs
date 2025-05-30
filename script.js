@@ -32,7 +32,7 @@ window.onload = function () {
 				
 				title.className = "ListTitle";
 				item.append(storage[lang][i].toString());
-				
+				console.log(storage[lang][i].toString());
 				title.appendChild(item);
 				
 				for (j in storage.data[i]) {
