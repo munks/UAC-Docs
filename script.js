@@ -31,7 +31,11 @@ window.onload = function () {
 				let item = document.createElement("summary");
 				
 				title.className = "ListTitle";
-				item.append(storage[lang][i].toString());
+				if (storage[lang][i] != null) {
+					item.append(storage[lang][i].toString());
+				} else {
+					item.append(storage.data[i]);
+				}
 				
 				title.appendChild(item);
 				
