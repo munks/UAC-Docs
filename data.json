@@ -62,9 +62,29 @@
 		}
 	},
 	"koKR": {
-		"Item_Accessary": "아이템/액세서리"
+		"Item_Accessary": "아이템/액세서리",
+		"Birdshot": "버드샷",
+		"Slug": "슬러그탄",
+		"TokamakPlasmaCompressor": "토카막 플라스마 압축기",
+		"GasCompressor": "가스 압축기",
+		"PlasmaInducer": "플라스마 유도기",
+		"ProjectileAccelerator": "탄환 가속기",
+		"DURounds": "열화우라늄탄",
+		"APRounds": "철갑탄",
+		"AimAssistant": "조준경",
+		"KineticIntegrator": "동작 발전기"
 	},
 	"enUS": {
-		"Item_Accessary": "Item/Accessary"
+		"Item_Accessary": "Item/Accessary",
+		"Birdshot": "Birdshot",
+		"Slug": "Slug",
+		"TokamakPlasmaCompressor": "Tokamak Plasma Compressor",
+		"GasCompressor": "Gas Compressor",
+		"PlasmaInducer": "Plasma Inducer",
+		"ProjectileAccelerator": "Projectile Accelerator",
+		"DURounds": "DU Rounds",
+		"APRounds": "AP Rounds",
+		"AimAssistant": "Aim Assistant",
+		"KineticIntegrator": "Kinetic Integrator"
 	}
 }

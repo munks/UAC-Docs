@@ -85,8 +85,9 @@
 							for (j in storage.data[i]) {
 								let name = document.createElement("div");
 								name.className = "Selector";
-								name.append(j);
-								name.addEventListener("click", ()=>{getData(j.toString())});
+								name.id = i.toString() + "/" + j.toString();
+								name.append(storage[lang][j].toString());
+								name.addEventListener("click", ()=>{getData()});
 								
 								title.appendChild(name);
 							}
@@ -97,8 +98,8 @@
 				xhttp.send();
 			}
 			
-			function getData (data) {
-				document.getElementById('ViewFrame').innerHTML = data;
+			function getData (e) {
+				document.getElementById('ViewFrame').innerHTML = e.target.id;
 			}
 		</script>
 	</head>
