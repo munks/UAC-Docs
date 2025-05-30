@@ -34,7 +34,7 @@ window.onload = function () {
 				if (storage[lang][i] != null) {
 					item.append(storage[lang][i].toString());
 				} else {
-					item.append(storage.data[i]);
+					item.append(storage.data[i].toString());
 				}
 				
 				title.appendChild(item);
@@ -46,7 +46,7 @@ window.onload = function () {
 					if (storage[lang][j] != null) {
 						name.append(storage[lang][j].toString());
 					} else {
-						name.append(storage.data[i][j]);
+						name.append(storage.data[i][j].toString());
 					}
 					name.addEventListener("click", (e)=>{ getData(e.target.id); });
 					
