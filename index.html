@@ -103,6 +103,7 @@
 			function getData (data) {
 				let c = data.split('/');
 				let text = "";
+				let idx;
 				
 				for (i in storage.data[c[0]][c[1]]) {
 					switch (i) {
@@ -110,6 +111,26 @@
 						case 'Spell':
 						case 'AttackSpeed':
 							text += storage[lang][i] + ": " + storage.data[c[0]][c[1]][i].toString() + "%<br>";
+							break;
+						case 'Range':
+						case 'Energy':
+							text += storage[lang][i] + ": " + storage.data[c[0]][c[1]][i].toString() + "<br>";
+							break;
+						case 'Special':
+							text += "<br><br>" + storage[lang][i + "Special"] + "<br>";
+							break;
+						case 'Type':
+						case 'Kind':
+							idx = 0;
+							text += "<br><br>" + storage[lang][i] + ": ";
+							for (t in storage.data[c[0]][c[1]][i]) {
+								if (idx != 0) {
+									text += ", ";
+								}
+								text += storage[lang][t];
+								idx++;
+							}
+							text += "<br>";
 							break;
 					}
 				}
