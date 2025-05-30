@@ -50,6 +50,7 @@
 			let xhttp = new XMLHttpRequest();
 			let storage; //json 객체
 			let list; //List id 객체
+			let view; //View id 객체
 			let lang; //언어 설정
 			
 			window.onload = function () {
@@ -68,6 +69,7 @@
 				}
 				
 				list = document.getElementById("List");
+				view = document.getElementById('ViewFrame');
 				xhttp.open("GET", "data.json", true);
 				xhttp.onreadystatechange = function() {
 					if(this.readyState == 4 && this.status == 200) {
@@ -86,8 +88,8 @@
 								let name = document.createElement("div");
 								name.className = "Selector";
 								name.id = i.toString() + "/" + j.toString();
-								name.append(storage[lang][j]);
-								name.addEventListener("click", ()=>{getData()});
+								name.append(storage[lang][j].toString());
+								name.addEventListener("click", (e)=>{ view.innerHTML = e.target.id; });
 								
 								title.appendChild(name);
 							}
