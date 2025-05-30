@@ -59,6 +59,450 @@
 				"Energy": 1.25,
 				"Type": "All"
 			}
+		},
+		"Item_Weapon": {
+			"S41RipSAW": {
+			},
+			"SLR1": {
+			},
+			"XM35MAR": {
+			},
+			"StynerBR2": {
+			},
+			"Mk53OCSW": {
+			},
+			"StynerSPR": {
+			},
+			"XM88bPhasedPlasmaRifle": {
+			},
+			"AS50Custom": {
+			},
+			"D20LaserRifle": {
+			},
+			"M1014": {
+			},
+			"PR34E": {
+			},
+			"PR42C": {
+			},
+			"M210SWS": {
+			},
+			"AA12": {
+			},
+			"ATLASX50": {
+			},
+			"Inferno": {
+			},
+			"M92Torrent": {
+			},
+			"IPR2": {
+			},
+			"M135Minigun": {
+			},
+			"M241MMG": {
+			},
+			"M5MAR": {
+			},
+			"SOFAR": {
+			},
+			"USMCR": {
+			},
+			"IDMR2": {
+			},
+			"ISS7": {
+			},
+			"M22BS": {
+			},
+			"M41SAW": {
+			},
+			"M79Flamethrower": {
+			},
+			"HK42": {
+			},
+			"XR900": {
+			}
+		},
+		"Item_Armor": {
+			"AOS": {
+			},
+			"CombatArmor": {
+			},
+			"SecurityArmor": {
+			},
+			"BioSuit": {
+			},
+			"ShieldGenerator": {
+			},
+			"KevlarBodyArmor": {
+			},
+			"OPA": {
+			},
+			"SPCS": {
+			},
+			"SolarArmor": {
+			}
+		},
+		"Item_Special": {
+			"FuelContainer": {
+			},
+			"DaewooK7": {
+			},
+			"M200SatchelChargePacked": {
+			},
+			"ResearchData": {
+			},
+			"BioSample": {
+			},
+			"SAMSitePacked": {
+			},
+			"SeismicResonator": {
+			},
+			"LLDR": {
+			},
+			"SatchelCharge": {
+			},
+			"KEC": {
+			},
+			"EnergyBattery": {
+			},
+			"Casualty": {
+			}
+		},
+		"UndeadT3": {
+			"Drowned": {
+			},
+			"InfestedCivilian": {
+			},
+			"Smoker": {
+			},
+			"Corrupted": {
+			},
+			"Rotten": {
+			},
+			"Unclean": {
+			},
+			"Unwilling": {
+			},
+			"Parasite": {
+			},
+			"Filthy": {
+			},
+			"ZombieWraith": {
+			},
+			"Swarmer": {
+			},
+			"Turned": {
+			},
+			"Shredder": {
+			},
+			"Crab": {
+			},
+			"Licker": {
+			},
+			"Leaper": {
+			},
+			"Pooch": {
+			},
+			"Swollen": {
+			},
+			"Creeper": {
+			},
+			"Boomer": {
+			},
+			"Tarantula": {
+			},
+			"Risen": {
+			},
+			"Eel": {
+			},
+			"Zombie": {
+			}
+		},
+		"UndeadT2": {
+			"Ambusher": {
+			},
+			"Belcher": {
+			},
+			"Leech": {
+			},
+			"Butcher": {
+			},
+			"Avenger": {
+			},
+			"Torch": {
+			},
+			"Baneling": {
+			},
+			"Tainted": {
+			},
+			"RiotGuard": {
+			},
+			"Abomination": {
+			},
+			"AcidVore": {
+			},
+			"Bloated": {
+			},
+			"ZombieCarrier": {
+			},
+			"ArchVile": {
+			},
+			"Weaver": {
+			},
+			"Morbus": {
+			},
+			"Krill": {
+			},
+			"Gargoyle": {
+			},
+			"Glutton": {
+			},
+			"Horror": {
+			},
+			"ZombieImpaler": {
+			},
+			"Drake": {
+			},
+			"Hopper": {
+			},
+			"Bruchus": {
+			},
+			"Spitter": {
+			},
+			"StalkerZombie": {
+			},
+			"Charger": {
+			},
+			"ArachnidMother": {
+			}
+		},
+		"UndeadT1": {
+			"Abhorrence": {
+			},
+			"QueenDarreus": {
+			},
+			"Matriarch": {
+			},
+			"Lorelei": {
+			},
+			"Splatter": {
+			},
+			"Titan": {
+			},
+			"Fatty": {
+			},
+			"Vulcanus": {
+			},
+			"Siren": {
+			},
+			"Tartaros": {
+			},
+			"RedstoneLavaCritter": {
+			},
+			"Magnus": {
+			},
+			"Deceiver": {
+			},
+			"Arachne": {
+			},
+			"Kraith": {
+			},
+			"Slivan": {
+			},
+			"Baron": {
+			},
+			"Scorpio": {
+			},
+			"BloodHunter": {
+			},
+			"Sasquatch": {
+			},
+			"Charon": {
+			},
+			"Spotter": {
+			},
+			"KingDarreus": {
+			},
+			"Dilophosaur": {
+			},
+			"Grotesque": {
+			},
+			"Apiary": {
+			},
+			"Metasis": {
+			},
+			"Lacerti": {
+			},
+			"Immussilus": {
+			},
+			"Gourmand": {
+			},
+			"ZombieYeti": {
+			},
+			"WraithLord": {
+			},
+			"Livid": {
+			},
+			"Minerva": {
+			},
+			"Cacumen": {
+			},
+			"Gargantuan": {
+			},
+			"Hunter": {
+			},
+			"Darreus": {
+			},
+			"Cursed": {
+			},
+			"Raisuli": {
+			},
+			"Arachnathid": {
+			},
+			"Ares": {
+			},
+			"Thanatos": {
+			},
+			"ThresherMaw": {
+			},
+			"ElectricMaw": {
+			}
+		},
+		"USArmy_Infantry": {
+			"PoliceOfficerRAODF": {
+			},
+			"RiotControl": {
+			},
+			"SpecterMini": {
+			},
+			"ShockTrooper": {
+			},
+			"Infantry74DFlamethrower": {
+			},
+			"GhostMini": {
+			},
+			"Infantry68WCombatMedic": {
+			},
+			"InfantryDesignatedMarksman": {
+			},
+			"InfantryJavelinGunner": {
+			},
+			"InfantryAutomaticRifleman": {
+			},
+			"InfantryCombatEngineer": {
+			},
+			"InfantryShotgunner": {
+			},
+			"InfantrySniper": {
+			},
+			"PoliceOfficerShotgun": {
+			},
+			"PoliceOfficer": {
+			},
+			"InfantryRifleman": {
+			}
+		},
+		"USArmy_Mechanics": {
+			"CH47Chinook": {
+			},
+			"ColonistShipFlying": {
+			},
+			"MilitarizedColonistShipFlying": {
+			},
+			"MilitarizedColonistTransport": {
+			},
+			"MkIIBattleWalker": {
+			},
+			"SpyPlane": {
+			},
+			"AH25Hunter": {
+			},
+			"M1A3Abrams": {
+			},
+			"Shocker": {
+			},
+			"M2A4BradleyIFV": {
+			},
+			"ColonistShip": {
+			},
+			"ColonistTransport": {
+			},
+			"CombatWalker": {
+			}
+		},
+		"USArmy_Drone": {
+			"ReconnaissanceDrone": {
+			},
+			"ReconDrone": {
+			}
+		},
+		"Explosive": {
+			"RCXD": {
+			},
+			"M200SatchelCharge": {
+			},
+			"Claymore2": {
+			},
+			"ParalysisTrap": {
+			},
+			"C4ExplosiveDevice": {
+			},
+			"ExplosiveChargeUnit": {
+			},
+			"ATMine": {
+			}
+		},
+		"Structure": {
+			"Bunker": {
+			},
+			"MiniM1SentryGun": {
+			},
+			"MotionSensor": {
+			},
+			"MK79SentryGun": {
+			},
+			"FieldCamera": {
+			},
+			"MK44SentryGun": {
+			}
+		},
+		"Campaign": {
+			"DrCharlie": {
+			},
+			"ChiefScarland": {
+			},
+			"BioResonator": {
+			},
+			"DrRosen": {
+			},
+			"DrMorrow": {
+			},
+			"Spy": {
+			},
+			"BDS": {
+			},
+			"LMTV": {
+			},
+			"SAMSite": {
+			},
+			"Windsor": {
+			},
+			"Civilian": {
+			},
+			"CivilianFemale": {
+			},
+			"SporeColony": {
+			}
+		},
+		"Lunatic": {
+			"NightRoach": {
+			},
+			"AmonShardA": {
+			},
+			"AmonShardB": {
+			},
+			"AmonShardC": {
+			}
 		}
 	},
 	"koKR": {
