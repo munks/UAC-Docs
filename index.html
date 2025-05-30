@@ -117,12 +117,12 @@
 							text += storage[lang][i] + ": " + storage.data[c[0]][c[1]][i].toString() + "<br>";
 							break;
 						case 'Special':
-							text += "<br><br>" + storage[lang][i + "Special"] + "<br>";
+							text += "<br>" + storage[lang][c[1] + "Special"] + "<br>";
 							break;
 						case 'Type':
 						case 'Kind':
 							idx = 0;
-							text += "<br><br>" + storage[lang][i] + ": ";
+							text += "<br>" + storage[lang][i] + ": ";
 							for (t in storage.data[c[0]][c[1]][i]) {
 								if (idx != 0) {
 									text += ", ";
