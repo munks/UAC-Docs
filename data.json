@@ -4,22 +4,22 @@
 			"Birdshot": {
 				"Ranged": 15,
 				"Special": true,
-				"Type": ["Shotgun"],
-				"Kind": ["Slug"]
+				"Type": "Shotgun",
+				"Kind": "Slug"
 			},
 			"Slug": {
 				"Ranged": 25,
 				"Range": 6,
 				"Special": true,
-				"Type": ["Shotgun"],
-				"Kind": ["Birdshot"]
+				"Type": "Shotgun",
+				"Kind": "Birdshot"
 			},
 			"TokamakPlasmaCompressor": {
 				"Ranged": 18,
 				"Spell": 10,
 				"Range": 1,
-				"Type": ["Plasma"],
-				"Kind": ["PlasmaInducer"]
+				"Type": "Plasma",
+				"Kind": "PlasmaInducer"
 			},
 			"GasCompressor": {
 				"AttackSpeed": 10,
@@ -31,8 +31,8 @@
 				"Ranged": 25,
 				"Spell": 25,
 				"Range": 1.5,
-				"Type": ["Plasma"],
-				"Kind": ["TokamakPlasmaCompressor"]
+				"Type": "Plasma",
+				"Kind": "TokamakPlasmaCompressor"
 			},
 			"ProjectileAccelerator": {
 				"Ranged": 10,
@@ -42,22 +42,22 @@
 			"DURounds": {
 				"Ranged": 30,
 				"Range": -1,
-				"Type": ["Rifles"],
-				"Kind": ["APRounds"]
+				"Type": "Rifles",
+				"Kind": "APRounds"
 			},
 			"APRounds": {
 				"Ranged": 18,
-				"Type": ["Rifles"],
-				"Kind": ["DURounds"]
+				"Type": "Rifles",
+				"Kind": "DURounds"
 			},
 			"AimAssistant": {
 				"AttackSpeed": 20,
 				"Range": 1,
-				"Type": ["All"]
+				"Type": "All"
 			},
 			"KineticIntegrator": {
 				"Energy": 1.25,
-				"Type": ["All"]
+				"Type": "All"
 			}
 		}
 	},
