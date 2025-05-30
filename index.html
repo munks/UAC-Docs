@@ -102,15 +102,13 @@
 			
 			function getData (data) {
 				let c = data.split('/');
-				let text;
+				let text = "";
 				
 				for (i in storage.data[c[0]][c[1]]) {
 					switch (i) {
 						case 'Ranged':
 						case 'Spell':
 						case 'AttackSpeed':
-							console.log(i);
-							console.log(i.toString());
 							text += storage[lang][i] + ": " + storage.data[c[0]][c[1]][i].toString() + "%<br>";
 							break;
 					}
