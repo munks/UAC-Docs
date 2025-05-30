@@ -48,10 +48,25 @@
 		</style>
 		<script>
 			let xhttp = new XMLHttpRequest();
-			let storage;
-			let list;
+			let storage; //json 객체
+			let list; //List id 객체
+			let lang; //언어 설정
 			
 			window.onload = function () {
+				if (navigator.language != null) {
+					lang = navigator.language;
+				} else if (navigator.userLanguage != null) {
+					lang = navigator.userLanguage;
+				} else if (navigator.systemLanguage != null) {
+					lang = navigator.systemLanguage;
+				}
+				lang = lang.toLowerCase().substring(0,2);
+				if (lang == "ko") {
+					lang = "koKR";
+				} else {
+					lang = "enUS";
+				}
+				
 				list = document.getElementById("List");
 				xhttp.open("GET", "data.json", true);
 				xhttp.onreadystatechange = function() {
@@ -63,7 +78,7 @@
 							let item = document.createElement("summary");
 							
 							title.className = "ListTitle";
-							item.append(storage.koKR[i].toString());
+							item.append(storage[lang][i].toString());
 							
 							title.appendChild(item);
 							
