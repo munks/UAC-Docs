@@ -63,11 +63,11 @@
 							let item = document.createElement("summary");
 							
 							title.className = "ListTitle";
-							item.append(i);
+							item.append(storage.koKR[i]);
 							
 							title.appendChild(item);
 							
-							for (j in i) {
+							for (j in storage.data[i]) {
 								let name = document.createElement("div");
 								name.className = "Selector";
 								name.append(j);
