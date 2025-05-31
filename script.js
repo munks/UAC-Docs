@@ -138,8 +138,10 @@ function getData (data) {
 							break;
 						case 'DamageType':
 							text += storage[lang][j] + ': ' + storage[lang][obj[i][j].toString()] + '<br>';
+							break;
 					}
 				}
+				break;
 		}
 	}
 	view.innerHTML = text;
