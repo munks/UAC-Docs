@@ -178,7 +178,7 @@
 					"Range": 0,
 					"Period": 1.2,
 					"Damage": [25, 25],
-					"Type": "Slash"
+					"DamageType": "Slash"
 				}
 			},
 			"InfestedCivilian": {
@@ -527,9 +527,19 @@
 		"Range": "사거리",
 		"RangeBonus": "사거리",
 		"EnergyRegen": "에너지 재생",
+		"Life": "체력",
+		"Speed": "이동 속도",
+		"Armor": "방어력",
+		"ArmorBonus": "방어력",
 		"Type": "장착 가능",
 		"All": "제한 없음",
 		"Kind": "동시 사용 불가",
+		"Weapon": "[무기]",
+		"Melee": "근접",
+		"Period": "공격 속도",
+		"Damage": "공격력",
+		"DamageType": "공격 유형",
+		"Slash": "가르기",
 		"Item_Accessary": "아이템/액세서리",
 		"Birdshot": "버드샷",
 		"BirdshotSpecial": "방사 피해와 범위가 대폭 증가<br>거리당 피해 감소 페널티 + 25%",
@@ -543,5 +553,7 @@
 		"APRounds": "철갑탄",
 		"AimAssistant": "조준경",
 		"KineticIntegrator": "동작 발전기"
+		"CreepSkin": "점막 피부",
+		"CreepSkinTip": "점막 위에 있는 동안 보호막이 175, 보호막 재생 속도가 100 증가합니다."
 	}
 }

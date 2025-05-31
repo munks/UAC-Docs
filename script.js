@@ -66,6 +66,8 @@ function getData (data) {
 	let obj = storage.data[c[0]][c[1]];
 	let t1 = (c[0] == 'UndeadT1') ? 'T1' : '';
 	
+	text += storage[lang][c[0]] + '<br><br>';
+	
 	for (i in obj) {
 		switch (i) {
 			//On Item
@@ -103,7 +105,7 @@ function getData (data) {
 			case 'Speed':
 			case 'Armor':
 				text += storage[lang][i];
-				text += ': <span class="' + i + t1 + '" data="' + obj[i].toString() + '">'
+				text += ': <span class="' + i + t1 + '" data-' + i.toLowerCase() '="' + obj[i].toString() + '">'
 				text += obj[i].toString();
 				text += '</span><br>';
 				break;
@@ -118,6 +120,26 @@ function getData (data) {
 					text += storage[lang][obj[i]] + ': ' + storage[lang][obj[i] + 'Tip'] + '<br>';
 				}
 				break;
+			case 'Weapon':
+				text += '<br>' + storage[lang][i] + '<br>';
+				for (j in obj[i]) {
+					switch (j) {
+						case 'Range':
+							text += storage[lang][j] + ': ' + (obj[i][j] == 0) ? storage[lang].Melee : obj[i][j].toString() + '<br>';
+							break;
+						case 'Period':
+							text += storage[lang][j] + ': ' + obj[i][j].toString() + '<br>';
+							break;
+						case 'Damage':
+							text += storage[lang][j];
+							text += ': <span class="' + j + t1 + '" data-damage="' + obj[i][j][0].toString() + '" data-random="' + obj[i][j][1].toString() + '">';
+							text += obj[i][j][0].toString() + '-' + (obj[i][j][0] + obj[i][j][1]).toString();
+							text += '</span><br>';
+							break;
+						case 'DamageType':
+							text += storage[lang][j] + ': ' + storage[lang][obj[i][j].toString()] + '<br>';
+					}
+				}
 		}
 	}
 	view.innerHTML = text;
