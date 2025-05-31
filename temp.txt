@@ -1,0 +1,47 @@
+
+function calcDiffValue () {
+	let p = pslider.value;
+	let val = [];
+	
+	if (p <= 3) {
+		val[0] = -0.0117;
+		val[1] = -0.04;
+		val[2] = -0.04;
+		val[3] = -0.04;
+	} else {
+	}
+}
+	if (PlayerGroupCount(gv_players) <= 3) {
+		gv_playerbuff = "PlayerHandicap";
+		gv_playerbuffAmount = 4 - PlayerGroupCount(gv_players);
+	} else {
+		gv_playerbuff = "PlayerModifier";
+		gv_playerbuffAmount = PlayerGroupCount(gv_players) - 3;
+	}
+    <CBehaviorBuff id="PlayerHandicap">
+        <InfoFlags index="Hidden" value="1"/>
+        <MaxStackCount value="12"/>
+        <Modification MoveSpeedBonus="-0.0117">
+            <DamageDealtFraction index="Melee" value="-0.04"/>
+            <DamageDealtFraction index="Ranged" value="-0.04"/>
+            <VitalMaxFractionArray index="Life" value="-0.04"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PlayerModifier">
+        <InfoFlags index="Hidden" value="1"/>
+        <MaxStackCount value="12"/>
+        <Modification MoveSpeedBonus="0.004">
+            <DamageDealtFraction index="Melee" value="0.015"/>
+            <DamageDealtFraction index="Ranged" value="0.015"/>
+            <VitalMaxFractionArray index="Life" value="0.006"/>
+        </Modification>
+    </CBehaviorBuff>
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifier", "Modification.MoveSpeedMultiplier", 14, FixedToString(1 + (gv_zombieBuffAmount * 0.015), c_fixedPrecisionAny));
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifier", "Modification.DamageDealtFraction[Melee]", 14, FixedToString(gv_zombieBuffAmount * 0.1, c_fixedPrecisionAny));
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifier", "Modification.DamageDealtFraction[Ranged]", 14, FixedToString(gv_zombieBuffAmount * 0.1, c_fixedPrecisionAny));
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifier", "Modification.LifeArmorBonus", 14, FixedToString(gv_zombieBuffAmount * 0.4, c_fixedPrecisionAny));
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifier", "Modification.VitalMaxFractionArray[Life]", 14, FixedToString(gv_zombieBuffAmount * 0.3, c_fixedPrecisionAny));
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifierBoss", "Modification.MoveSpeedMultiplier", 14, FixedToString(1 + (gv_zombieBuffAmount * 0.013), c_fixedPrecisionAny));
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifierBoss", "Modification.DamageDealtFraction[Melee]", 14, FixedToString(gv_zombieBuffAmount * 0.1, c_fixedPrecisionAny));
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifierBoss", "Modification.DamageDealtFraction[Ranged]", 14, FixedToString(gv_zombieBuffAmount * 0.1, c_fixedPrecisionAny));
+	CatalogFieldValueSet(c_gameCatalogBehavior, "DifficultyModifierBoss", "Modification.VitalMaxFractionArray[Life]", 14, FixedToString(gv_zombieBuffAmount * 0.085, c_fixedPrecisionAny));
