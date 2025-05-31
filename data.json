@@ -9,7 +9,7 @@
 			},
 			"Slug": {
 				"Ranged": 25,
-				"Range": 6,
+				"RangeBonus": 6,
 				"Special": true,
 				"Type": "Shotgun",
 				"Kind": "Birdshot"
@@ -17,31 +17,31 @@
 			"TokamakPlasmaCompressor": {
 				"Ranged": 18,
 				"Spell": 10,
-				"Range": 1,
+				"RangeBonus": 1,
 				"Type": "Plasma",
 				"Kind": "PlasmaInducer"
 			},
 			"GasCompressor": {
 				"AttackSpeed": 10,
 				"Spell": 10,
-				"Range": 1,
+				"RangeBonus": 1,
 				"Type": ["Flamethrower", "GL"]
 			},
 			"PlasmaInducer": {
 				"Ranged": 25,
 				"Spell": 25,
-				"Range": 1.5,
+				"RangeBonus": 1.5,
 				"Type": "Plasma",
 				"Kind": "TokamakPlasmaCompressor"
 			},
 			"ProjectileAccelerator": {
 				"Ranged": 10,
-				"Range": 1.5,
+				"RangeBonus": 1.5,
 				"Type": ["Rifles", "Shotgun"]
 			},
 			"DURounds": {
 				"Ranged": 30,
-				"Range": -1,
+				"RangeBonus": -1,
 				"Type": "Rifles",
 				"Kind": "APRounds"
 			},
@@ -52,11 +52,11 @@
 			},
 			"AimAssistant": {
 				"AttackSpeed": 20,
-				"Range": 1,
+				"RangeBonus": 1,
 				"Type": "All"
 			},
 			"KineticIntegrator": {
-				"Energy": 1.25,
+				"EnergyRegen": 1.25,
 				"Type": "All"
 			}
 		},
@@ -170,6 +170,16 @@
 		},
 		"UndeadT3": {
 			"Drowned": {
+				"Life": 165,
+				"Speed": 2.6015,
+				"Armor": 0,
+				"Behavior": "CreepSkin",
+				"Weapon": {
+					"Range": 0,
+					"Period": 1.2,
+					"Damage": [25, 25],
+					"Type": "Slash"
+				}
 			},
 			"InfestedCivilian": {
 			},
@@ -515,7 +525,8 @@
 		"Spell": "폭발 피해",
 		"AttackSpeed": "공격 속도",
 		"Range": "사거리",
-		"Energy": "에너지",
+		"RangeBonus": "사거리",
+		"EnergyRegen": "에너지 재생",
 		"Type": "장착 가능",
 		"All": "제한 없음",
 		"Kind": "동시 사용 불가",

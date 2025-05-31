@@ -13,24 +13,24 @@ window.onload = function () {
 		lang = navigator.systemLanguage;
 	}
 	lang = lang.toLowerCase().substring(0,2);
-	if (lang == "ko") {
-		lang = "koKR";
+	if (lang == 'ko') {
+		lang = 'koKR';
 	} else {
-		lang = "enUS";
+		lang = 'enUS';
 	}
 	
-	list = document.getElementById("List");
+	list = document.getElementById('List');
 	view = document.getElementById('ViewFrame');
-	xhttp.open("GET", "data.json", true);
+	xhttp.open('GET', 'data.json', true);
 	xhttp.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
 			storage = JSON.parse(this.response);
 			
 			for (i in storage.data) {
-				let title = document.createElement("details");
-				let item = document.createElement("summary");
+				let title = document.createElement('details');
+				let item = document.createElement('summary');
 				
-				title.className = "ListTitle";
+				title.className = 'ListTitle';
 				if (storage[lang][i] != null) {
 					item.append(storage[lang][i].toString());
 				} else {
@@ -40,15 +40,15 @@ window.onload = function () {
 				title.appendChild(item);
 				
 				for (j in storage.data[i]) {
-					let name = document.createElement("div");
-					name.className = "Selector";
-					name.id = i.toString() + "/" + j.toString();
+					let name = document.createElement('div');
+					name.className = 'Selector';
+					name.id = i.toString() + '/' + j.toString();
 					if (storage[lang][j] != null) {
 						name.append(storage[lang][j].toString());
 					} else {
 						name.append(j);
 					}
-					name.addEventListener("click", (e)=>{ getData(e.target.id); });
+					name.addEventListener('click', (e)=>{ getData(e.target.id); });
 					
 					title.appendChild(name);
 				}
@@ -61,39 +61,62 @@ window.onload = function () {
 
 function getData (data) {
 	let c = data.split('/');
-	let text = "";
+	let text = '';
 	let idx;
+	let obj = storage.data[c[0]][c[1]];
+	let t1 = (c[0] == 'UndeadT1') ? 'T1' : '';
 	
-	for (i in storage.data[c[0]][c[1]]) {
+	for (i in obj) {
 		switch (i) {
+			//On Item
 			case 'Ranged':
 			case 'Spell':
 			case 'AttackSpeed':
-				text += storage[lang][i] + ": " + storage.data[c[0]][c[1]][i].toString() + "%<br>";
+				text += storage[lang][i] + ': ' + obj[i].toString() + '%<br>';
 				break;
-			case 'Range':
-			case 'Energy':
-				text += storage[lang][i] + ": " + storage.data[c[0]][c[1]][i].toString() + "<br>";
+			case 'RangeBonus':
+			case 'EnergyRegen':
+				text += storage[lang][i] + ': ' + obj[i].toString() + '<br>';
 				break;
 			case 'Special':
-				text += "<br>" + storage[lang][c[1] + "Special"] + "<br>";
+				text += '<br>' + storage[lang][c[1] + 'Special'] + '<br>';
 				break;
 			case 'Type':
 			case 'Kind':
 				idx = 0;
-				text += "<br>" + storage[lang][i] + ": ";
-				if (Array.isArray(storage.data[c[0]][c[1]][i])) {
-					for (t in storage.data[c[0]][c[1]][i]) {
+				text += '<br>' + storage[lang][i] + ': ';
+				if (Array.isArray(obj[i])) {
+					for (t in obj[i]) {
 						if (idx != 0) {
-							text += ", ";
+							text += ', ';
 						}
-						text += storage[lang][storage.data[c[0]][c[1]][i][t]];
+						text += storage[lang][obj[i][t]];
 						idx++;
 					}
 				} else {
-					text += storage[lang][storage.data[c[0]][c[1]][i]];
+					text += storage[lang][obj[i]];
 				}
-				text += "<br>";
+				text += '<br>';
+				break;
+			//On Unit
+			case 'Life':
+			case 'Speed':
+			case 'Armor':
+				text += storage[lang][i];
+				text += ': <span class="' + i + t1 + '" data="' + obj[i].toString() + '">'
+				text += obj[i].toString();
+				text += '</span><br>';
+				break;
+			case 'Behavior':
+				text += '<br>';
+				if (Array.isArray(obj[i])) {
+					for (t in obj[i]) {
+						text += storage[lang][obj[i][t]] + ': ' + storage[lang][obj[i][t] + 'Tip'] + '<br>';
+						idx++;
+					}
+				} else {
+					text += storage[lang][obj[i]] + ': ' + storage[lang][obj[i] + 'Tip'] + '<br>';
+				}
 				break;
 		}
 	}
