@@ -31,6 +31,7 @@ summary:hover, .Selector:hover {
 	height: 100%;
 }
 #Data {
+	position: absolute;
 	height: 100%;
 	width: 73%;
 }
@@ -40,6 +41,6 @@ summary:hover, .Selector:hover {
 }
 #PropsFrame {
 	position: absolute;
-	right: 0%;
-	transform: translate(-50%, 0%);
+    right: 2%;
+    top: 2%;
 }
