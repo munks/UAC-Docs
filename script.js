@@ -105,7 +105,7 @@ function getData (data) {
 			case 'Speed':
 			case 'Armor':
 				text += storage[lang][i];
-				text += ': <span class="' + i + t1 + '" data-' + i.toLowerCase() '="' + obj[i].toString() + '">'
+				text += ': <span class="' + i + t1 + '" data-' + i.toLowerCase() + '="' + obj[i].toString() + '">'
 				text += obj[i].toString();
 				text += '</span><br>';
 				break;
