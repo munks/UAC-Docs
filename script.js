@@ -125,7 +125,7 @@ function getData (data) {
 				for (j in obj[i]) {
 					switch (j) {
 						case 'Range':
-							text += storage[lang][j] + ': ' + (obj[i][j] == 0) ? storage[lang].Melee : obj[i][j].toString() + '<br>';
+							text += storage[lang][j] + ': ' + ((obj[i][j] == 0) ? storage[lang].Melee : obj[i][j].toString()) + '<br>';
 							break;
 						case 'Period':
 							text += storage[lang][j] + ': ' + obj[i][j].toString() + '<br>';
