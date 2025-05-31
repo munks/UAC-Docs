@@ -3,6 +3,8 @@ let storage; //json 객체
 let list; //List id 객체
 let view; //View id 객체
 let lang; //언어 설정
+let pslider; //플레이어 수 객체
+let pval;
 
 window.onload = function () {
 	if (navigator.language != null) {
@@ -57,6 +59,14 @@ window.onload = function () {
 		}
 	};
 	xhttp.send();
+	
+	pslider = document.getElementById("Player");
+	pval = document.getElementById("PVal");
+	pval.innerHTML = pslider.value;
+	
+	pslider.oninput = function() {
+		pval.innerHTML = this.value;
+	}
 }
 
 function getData (data) {

@@ -36,4 +36,9 @@ summary:hover, .Selector:hover {
 }
 #ViewFrame {
 	padding: 1em 1em 1em 1em;
+	position: relative;
+}
+#PropsFrame {
+	position: absolute;
+	right: 0%;
 }
