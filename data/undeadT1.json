@@ -1,0 +1,96 @@
+undeadT1 = {
+	"data": {
+		"UndeadT1": {
+			"Abhorrence": {
+			},
+			"QueenDarreus": {
+			},
+			"Matriarch": {
+			},
+			"Lorelei": {
+			},
+			"Splatter": {
+			},
+			"Titan": {
+			},
+			"Fatty": {
+			},
+			"Vulcanus": {
+			},
+			"Siren": {
+			},
+			"Tartaros": {
+			},
+			"RedstoneLavaCritter": {
+			},
+			"Magnus": {
+			},
+			"Deceiver": {
+			},
+			"Arachne": {
+			},
+			"Kraith": {
+			},
+			"Slivan": {
+			},
+			"Baron": {
+			},
+			"Scorpio": {
+			},
+			"BloodHunter": {
+			},
+			"Sasquatch": {
+			},
+			"Charon": {
+			},
+			"Spotter": {
+			},
+			"KingDarreus": {
+			},
+			"Dilophosaur": {
+			},
+			"Grotesque": {
+			},
+			"Apiary": {
+			},
+			"Metasis": {
+			},
+			"Lacerti": {
+			},
+			"Immussilus": {
+			},
+			"Gourmand": {
+			},
+			"ZombieYeti": {
+			},
+			"WraithLord": {
+			},
+			"Livid": {
+			},
+			"Minerva": {
+			},
+			"Cacumen": {
+			},
+			"Gargantuan": {
+			},
+			"Hunter": {
+			},
+			"Darreus": {
+			},
+			"Cursed": {
+			},
+			"Raisuli": {
+			},
+			"Arachnathid": {
+			},
+			"Ares": {
+			},
+			"Thanatos": {
+			},
+			"ThresherMaw": {
+			},
+			"ElectricMaw": {
+			}
+		}
+	}
+};

@@ -1,0 +1,30 @@
+itemSpecial = {
+	"data": {
+		"Item_Special": {
+			"FuelContainer": {
+			},
+			"DaewooK7": {
+			},
+			"M200SatchelChargePacked": {
+			},
+			"ResearchData": {
+			},
+			"BioSample": {
+			},
+			"SAMSitePacked": {
+			},
+			"SeismicResonator": {
+			},
+			"LLDR": {
+			},
+			"SatchelCharge": {
+			},
+			"KEC": {
+			},
+			"EnergyBattery": {
+			},
+			"Casualty": {
+			}
+		}
+	}
+};

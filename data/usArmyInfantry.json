@@ -1,0 +1,38 @@
+usArmyInfantry = {
+	"data": {
+		"USArmy_Infantry": {
+			"PoliceOfficerRAODF": {
+			},
+			"RiotControl": {
+			},
+			"SpecterMini": {
+			},
+			"ShockTrooper": {
+			},
+			"Infantry74DFlamethrower": {
+			},
+			"GhostMini": {
+			},
+			"Infantry68WCombatMedic": {
+			},
+			"InfantryDesignatedMarksman": {
+			},
+			"InfantryJavelinGunner": {
+			},
+			"InfantryAutomaticRifleman": {
+			},
+			"InfantryCombatEngineer": {
+			},
+			"InfantryShotgunner": {
+			},
+			"InfantrySniper": {
+			},
+			"PoliceOfficerShotgun": {
+			},
+			"PoliceOfficer": {
+			},
+			"InfantryRifleman": {
+			}
+		}
+	}
+};

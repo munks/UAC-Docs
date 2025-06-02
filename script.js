@@ -10,6 +10,8 @@ let dval;
 let ddata = [[0.015, 0.1, 0.3, 0.4], [0.013, 0.1, 0.085, 0]];
 
 window.onload = function () {
+	let data = {};
+
 	if (navigator.language != null) {
 		lang = navigator.language;
 	} else if (navigator.userLanguage != null) {
@@ -26,9 +28,26 @@ window.onload = function () {
 	
 	list = document.getElementById('List');
 	view = document.getElementById('ViewFrame');
-
-	Object.assign(data, langFile);
-	storage = JSON.parse(JSON.stringify(data));
+	
+	storage = JSON.parse(JSON.stringify(
+				Object.assign(
+						{"data": Object.assign(
+							itemAccessary.data,
+							itemArmor.data,
+							itemWeapon.data,
+							itemSpecial.data,
+							explosive.data,
+							undeadT3.data,
+							undeadT2.data,
+							undeadT1.data,
+							usArmyDrone.data,
+							usArmyInfantry.data,
+							usArmyMechanics.data,
+							campaign.data,
+							structure.data,
+							lunatic.data)
+						}, koKR
+				)));
 	dataInit();
 
 	pslider = document.getElementById("Player");

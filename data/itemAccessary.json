@@ -1,0 +1,64 @@
+itemAccessary = {
+	"data": {
+		"Item_Accessary": {
+			"Birdshot": {
+				"Ranged": 15,
+				"Special": true,
+				"Type": "Shotgun",
+				"Kind": "Slug"
+			},
+			"Slug": {
+				"Ranged": 25,
+				"RangeBonus": 6,
+				"Special": true,
+				"Type": "Shotgun",
+				"Kind": "Birdshot"
+			},
+			"TokamakPlasmaCompressor": {
+				"Ranged": 18,
+				"Spell": 10,
+				"RangeBonus": 1,
+				"Type": "Plasma",
+				"Kind": "PlasmaInducer"
+			},
+			"GasCompressor": {
+				"AttackSpeed": 10,
+				"Spell": 10,
+				"RangeBonus": 1,
+				"Type": ["Flamethrower", "GL"]
+			},
+			"PlasmaInducer": {
+				"Ranged": 25,
+				"Spell": 25,
+				"RangeBonus": 1.5,
+				"Type": "Plasma",
+				"Kind": "TokamakPlasmaCompressor"
+			},
+			"ProjectileAccelerator": {
+				"Ranged": 10,
+				"RangeBonus": 1.5,
+				"Type": ["Rifles", "Shotgun"]
+			},
+			"DURounds": {
+				"Ranged": 30,
+				"RangeBonus": -1,
+				"Type": "Rifles",
+				"Kind": "APRounds"
+			},
+			"APRounds": {
+				"Ranged": 18,
+				"Type": "Rifles",
+				"Kind": "DURounds"
+			},
+			"AimAssistant": {
+				"AttackSpeed": 20,
+				"RangeBonus": 1,
+				"Type": "All"
+			},
+			"KineticIntegrator": {
+				"EnergyRegen": 1.25,
+				"Type": "All"
+			}
+		}
+	}
+};

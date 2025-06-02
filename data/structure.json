@@ -1,0 +1,18 @@
+structure = {
+	"data": {
+		"Structure": {
+			"Bunker": {
+			},
+			"MiniM1SentryGun": {
+			},
+			"MotionSensor": {
+			},
+			"MK79SentryGun": {
+			},
+			"FieldCamera": {
+			},
+			"MK44SentryGun": {
+			}
+		}
+	}
+};

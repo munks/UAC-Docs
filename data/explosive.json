@@ -1,0 +1,20 @@
+const explosive = {
+	"data": {
+		"Explosive": {
+			"RCXD": {
+			},
+			"M200SatchelCharge": {
+			},
+			"Claymore2": {
+			},
+			"ParalysisTrap": {
+			},
+			"C4ExplosiveDevice": {
+			},
+			"ExplosiveChargeUnit": {
+			},
+			"ATMine": {
+			}
+		}
+	}
+};

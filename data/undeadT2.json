@@ -1,0 +1,62 @@
+undeadT2 = {
+	"data": {
+		"UndeadT2": {
+			"Ambusher": {
+			},
+			"Belcher": {
+			},
+			"Leech": {
+			},
+			"Butcher": {
+			},
+			"Avenger": {
+			},
+			"Torch": {
+			},
+			"Baneling": {
+			},
+			"Tainted": {
+			},
+			"RiotGuard": {
+			},
+			"Abomination": {
+			},
+			"AcidVore": {
+			},
+			"Bloated": {
+			},
+			"ZombieCarrier": {
+			},
+			"ArchVile": {
+			},
+			"Weaver": {
+			},
+			"Morbus": {
+			},
+			"Krill": {
+			},
+			"Gargoyle": {
+			},
+			"Glutton": {
+			},
+			"Horror": {
+			},
+			"ZombieImpaler": {
+			},
+			"Drake": {
+			},
+			"Hopper": {
+			},
+			"Bruchus": {
+			},
+			"Spitter": {
+			},
+			"StalkerZombie": {
+			},
+			"Charger": {
+			},
+			"ArachnidMother": {
+			}
+		}
+	}
+};

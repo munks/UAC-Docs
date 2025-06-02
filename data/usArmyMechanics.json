@@ -1,0 +1,32 @@
+const usArmyMechanics = {
+	"data": {
+		"USArmy_Mechanics": {
+			"CH47Chinook": {
+			},
+			"ColonistShipFlying": {
+			},
+			"MilitarizedColonistShipFlying": {
+			},
+			"MilitarizedColonistTransport": {
+			},
+			"MkIIBattleWalker": {
+			},
+			"SpyPlane": {
+			},
+			"AH25Hunter": {
+			},
+			"M1A3Abrams": {
+			},
+			"Shocker": {
+			},
+			"M2A4BradleyIFV": {
+			},
+			"ColonistShip": {
+			},
+			"ColonistTransport": {
+			},
+			"CombatWalker": {
+			}
+		}
+	}
+};

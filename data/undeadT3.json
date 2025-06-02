@@ -1,0 +1,65 @@
+undeadT3 = {
+	"data": {
+		"UndeadT3": {
+			"Drowned": {
+				"Life": 165,
+				"Speed": 2.6015,
+				"Armor": 0,
+				"Behavior": "CreepSkin",
+				"Weapon": {
+					"Name": "DrownedClaws",
+					"Range": 0,
+					"Period": 1.2,
+					"Damage": [25, 25],
+					"DamageType": "Slash"
+				}
+			},
+			"InfestedCivilian": {
+			},
+			"Smoker": {
+			},
+			"Corrupted": {
+			},
+			"Rotten": {
+			},
+			"Unclean": {
+			},
+			"Unwilling": {
+			},
+			"Parasite": {
+			},
+			"Filthy": {
+			},
+			"ZombieWraith": {
+			},
+			"Swarmer": {
+			},
+			"Turned": {
+			},
+			"Shredder": {
+			},
+			"Crab": {
+			},
+			"Licker": {
+			},
+			"Leaper": {
+			},
+			"Pooch": {
+			},
+			"Swollen": {
+			},
+			"Creeper": {
+			},
+			"Boomer": {
+			},
+			"Tarantula": {
+			},
+			"Risen": {
+			},
+			"Eel": {
+			},
+			"Zombie": {
+			}
+		}
+	}
+};

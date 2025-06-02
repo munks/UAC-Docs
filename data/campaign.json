@@ -1,0 +1,32 @@
+const campaign = {
+	"data": {
+		"Campaign": {
+			"DrCharlie": {
+			},
+			"ChiefScarland": {
+			},
+			"BioResonator": {
+			},
+			"DrRosen": {
+			},
+			"DrMorrow": {
+			},
+			"Spy": {
+			},
+			"BDS": {
+			},
+			"LMTV": {
+			},
+			"SAMSite": {
+			},
+			"Windsor": {
+			},
+			"Civilian": {
+			},
+			"CivilianFemale": {
+			},
+			"SporeColony": {
+			}
+		}
+	}
+};

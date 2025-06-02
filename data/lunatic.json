@@ -1,0 +1,14 @@
+lunatic = {
+	"data": {
+		"Lunatic": {
+			"NightRoach": {
+			},
+			"AmonShardA": {
+			},
+			"AmonShardB": {
+			},
+			"AmonShardC": {
+			}
+		}
+	}
+};

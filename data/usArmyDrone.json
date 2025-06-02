@@ -1,0 +1,10 @@
+usArmyDrone = {
+	"data": {
+		"USArmy_Drone": {
+			"ReconnaissanceDrone": {
+			},
+			"ReconDrone": {
+			}
+		}
+	}
+}

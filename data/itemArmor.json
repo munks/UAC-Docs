@@ -1,0 +1,24 @@
+itemArmor = {
+	"data": {
+		"Item_Armor": {
+			"AOS": {
+			},
+			"CombatArmor": {
+			},
+			"SecurityArmor": {
+			},
+			"BioSuit": {
+			},
+			"ShieldGenerator": {
+			},
+			"KevlarBodyArmor": {
+			},
+			"OPA": {
+			},
+			"SPCS": {
+			},
+			"SolarArmor": {
+			}
+		}
+	}
+};

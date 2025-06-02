@@ -1,0 +1,66 @@
+itemWeapon = {
+	"data": {
+		"Item_Weapon": {
+			"S41RipSAW": {
+			},
+			"SLR1": {
+			},
+			"XM35MAR": {
+			},
+			"StynerBR2": {
+			},
+			"Mk53OCSW": {
+			},
+			"StynerSPR": {
+			},
+			"XM88bPhasedPlasmaRifle": {
+			},
+			"AS50Custom": {
+			},
+			"D20LaserRifle": {
+			},
+			"M1014": {
+			},
+			"PR34E": {
+			},
+			"PR42C": {
+			},
+			"M210SWS": {
+			},
+			"AA12": {
+			},
+			"ATLASX50": {
+			},
+			"Inferno": {
+			},
+			"M92Torrent": {
+			},
+			"IPR2": {
+			},
+			"M135Minigun": {
+			},
+			"M241MMG": {
+			},
+			"M5MAR": {
+			},
+			"SOFAR": {
+			},
+			"USMCR": {
+			},
+			"IDMR2": {
+			},
+			"ISS7": {
+			},
+			"M22BS": {
+			},
+			"M41SAW": {
+			},
+			"M79Flamethrower": {
+			},
+			"HK42": {
+			},
+			"XR900": {
+			}
+		}
+	}
+};
