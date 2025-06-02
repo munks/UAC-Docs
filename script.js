@@ -151,7 +151,7 @@ function getData (data) {
 				}
 				break;
 			case 'Weapon':
-				text += '<br>' + storage[lang][obj[i].Name] + '<br>';
+				text += '<br>[' + storage[lang][obj[i].Name] + ']<br>';
 				for (j in obj[i]) {
 					switch (j) {
 						case 'Range':
