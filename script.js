@@ -95,8 +95,11 @@ function getData (data) {
 	let obj = storage.data[c[0]][c[1]];
 	let t1 = (c[0] == 'UndeadT1') ? 'T1' : '';
 	
-	text += '[' + storage[lang][c[1]] + ']<br>'
-	text += storage[lang][c[1] + 'Tip'] + '<br><br>';
+	text += '[' + storage[lang][c[1]] + ']<br>';
+	if (storage[lang][c[1] + 'Tip']) {
+		text += storage[lang][c[1] + 'Tip'] + '<br>';
+	}
+	text += '<br>';
 	
 	for (i in obj) {
 		switch (i) {
