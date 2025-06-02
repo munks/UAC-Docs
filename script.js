@@ -31,7 +31,7 @@ window.onload = function () {
 	
 	storage = JSON.parse(JSON.stringify(
 				Object.assign(
-						{"data": Object.assign(
+						{'data': Object.assign(
 							itemAccessary.data,
 							itemArmor.data,
 							itemWeapon.data,
@@ -50,8 +50,8 @@ window.onload = function () {
 				)));
 	dataInit();
 
-	pslider = document.getElementById("Player");
-	pval = document.getElementById("PVal");
+	pslider = document.getElementById('Player');
+	pval = document.getElementById('PVal');
 	pval.innerHTML = pslider.value;
 	
 	pslider.oninput = function() {
@@ -59,8 +59,8 @@ window.onload = function () {
 		calcDiffValue();
 	}
 
-	dslider = document.getElementById("Diff");
-	dval = document.getElementById("DVal");
+	dslider = document.getElementById('Diff');
+	dval = document.getElementById('DVal');
 	dval.innerHTML = dslider.value;
 	
 	dslider.oninput = function() {
@@ -99,7 +99,7 @@ function dataInit () {
 		list.append(title);
 	}
 
-	document.getElementById("DTip").title = storage[lang].DiffTip;
+	document.getElementById('DTip').dataset.title = storage[lang].DiffTip;
 }
 
 function getData (data) {
@@ -107,8 +107,18 @@ function getData (data) {
 	let text = '';
 	let idx;
 	let obj = storage.data[c[0]][c[1]];
-	let t1 = (c[0] == 'UndeadT1') ? 'T1' : '';
+	let t1;
 	
+	switch (c[0]) {
+		case 'UndeadT1':
+		case 'UndeadT2':
+		case 'UndeadT3':
+			view.className = c[0].slice(6);
+			break;
+		default:
+			view.className = '';
+	}
+
 	text += '[' + storage[lang][c[1]] + ']<br>';
 	if (storage[lang][c[1] + 'Tip']) {
 		text += storage[lang][c[1] + 'Tip'] + '<br>';
@@ -152,7 +162,7 @@ function getData (data) {
 			case 'Speed':
 			case 'Armor':
 				text += storage[lang][i];
-				text += ': <span class="Props' + t1 + '" data-' + i.toLowerCase() + '="' + obj[i].toString() + '">'
+				text += ': <span id="' + i + '" data-' + i.toLowerCase() + '="' + obj[i].toString() + '">'
 				text += obj[i].toString();
 				text += '</span><br>';
 				break;
@@ -179,7 +189,7 @@ function getData (data) {
 							break;
 						case 'Damage':
 							text += storage[lang][j];
-							text += ': <span class="Props' + t1 + '" data-damage="' + obj[i][j][0].toString() + '" data-random="' + obj[i][j][1].toString() + '">';
+							text += ': <span id="Damage" data-damage="' + obj[i][j][0].toString() + '" data-random="' + obj[i][j][1].toString() + '">';
 							text += obj[i][j][0].toString() + '-' + (obj[i][j][0] + obj[i][j][1]).toString();
 							text += '</span><br>';
 							break;
@@ -200,11 +210,12 @@ function calcDiffValue () {
 	let pval = 0;
 	let pidx = 0;
 	let d = dslider.value;
-	let obj = document.getElementsByClassName('Props');
-	let objt1 = document.getElementsByClassName('PropsT1');
+	let didx = 0;
 	let tmpval;
 	let tmpval2;
-
+	
+	if (!view.className) { console.log('true'); return; }
+	
 	if (p <= 3) {
 		pval = 4 - p;
 		pidx = 0;
@@ -212,26 +223,25 @@ function calcDiffValue () {
 		pval = p - 3;
 		pidx = 1;
 	}
-	
-	for (i in obj) {
-		for (j in obj[i].dataset) {
-			tmpval = parseFloat(obj[i].dataset[j]);
-			switch (j) {
-				case 'life':
-					obj[i].innerHTML = (tmpval * (1 + (pdata[pidx][2] * pval) + (ddata[0][2] * d))).toFixed(0);
-					break;
-				case 'speed':
-					obj[i].innerHTML = parseFloat(((tmpval + (pdata[pidx][0] * pval)) * (1 + (ddata[0][0] * d))).toFixed(4));
-					break;
-				case 'armor':
-					obj[i].innerHTML = parseFloat((tmpval + (ddata[0][3] * d)).toFixed(2));
-					break;
-				case 'damage':
-					tmpval2 = 1 + (pdata[pidx][1] * pval) + (ddata[0][1] * d);
-					obj[i].innerHTML = parseFloat((tmpval * tmpval2).toFixed(2)) + '-' + parseFloat(((tmpval * tmpval2) + (parseFloat(obj[i].dataset['random']) * tmpval2)).toFixed(2));
-					break;
-			}
-		}
-	}
+
+	didx = view.className == 'T1' ? 1 : 0;
+
+	obj = document.getElementById('Life');
+	tmpval = parseFloat(obj.dataset['life']);
+	obj.innerHTML = (tmpval * (1 + (pdata[pidx][2] * pval) + (ddata[didx][2] * d))).toFixed(0);
+
+	obj = document.getElementById('Speed');
+	tmpval = parseFloat(obj.dataset['speed']);
+	obj.innerHTML = parseFloat(((tmpval + (pdata[pidx][0] * pval)) * (1 + (ddata[didx][0] * d))).toFixed(4));
+
+	obj = document.getElementById('Armor');
+	tmpval = parseFloat(obj.dataset['armor']);
+	obj.innerHTML = parseFloat((tmpval + (ddata[didx][3] * d)).toFixed(2));
+
+	obj = document.getElementById('Damage');
+	tmpval = parseFloat(obj.dataset['damage']);
+	tmpval2 = 1 + (pdata[pidx][1] * pval) + (ddata[didx][1] * d);
+	obj.innerHTML = parseFloat((tmpval * tmpval2).toFixed(2)) + '-' +
+						parseFloat(((tmpval * tmpval2) + (parseFloat(obj.dataset['random']) * tmpval2)).toFixed(2));
 }
 
