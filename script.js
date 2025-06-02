@@ -1,4 +1,3 @@
-let xhttp = new XMLHttpRequest();
 let storage; //json 객체
 let list; //List id 객체
 let view; //View id 객체
@@ -27,14 +26,10 @@ window.onload = function () {
 	
 	list = document.getElementById('List');
 	view = document.getElementById('ViewFrame');
-	xhttp.open('GET', 'data.json', true);
-	xhttp.onreadystatechange = function() {
-		if(this.readyState == 4 && this.status == 200) {
-			storage = JSON.parse(this.response);
-			dataInit();
-		}
-	};
-	xhttp.send();
+
+	Object.assign(data, langFile);
+	storage = JSON.parse(JSON.stringify(data));
+	dataInit();
 
 	pslider = document.getElementById("Player");
 	pval = document.getElementById("PVal");
