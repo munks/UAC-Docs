@@ -5,10 +5,10 @@ let view; //View id 객체
 let lang; //언어 설정
 let pslider; //플레이어 수 객체
 let pval;
-let pdata = {{-0.0117, -0.04, -0.04}, {0.004, 0.015, 0.006}};
+let pdata = [[-0.0117, -0.04, -0.04], [0.004, 0.015, 0.006]];
 let dslider; //난이도 객체
 let dval;
-let ddata = {{0.015, 0.1, 0.3, 0.4}, {0.013, 0.1, 0.085, 0}};
+let ddata = [[0.015, 0.1, 0.3, 0.4], [0.013, 0.1, 0.085, 0]];
 
 window.onload = function () {
 	if (navigator.language != null) {
