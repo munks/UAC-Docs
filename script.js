@@ -95,7 +95,8 @@ function getData (data) {
 	let obj = storage.data[c[0]][c[1]];
 	let t1 = (c[0] == 'UndeadT1') ? 'T1' : '';
 	
-	text += storage[lang][c[1]] + '<br><br>';
+	text += '[' + storage[lang][c[1]] + ']<br>'
+	text += storage[lang][c[1] + 'Tip'] + '<br><br>';
 	
 	for (i in obj) {
 		switch (i) {
@@ -150,7 +151,7 @@ function getData (data) {
 				}
 				break;
 			case 'Weapon':
-				text += '<br>' + storage[lang][i] + '<br>';
+				text += '<br>' + storage[lang][obj[i].Name] + '<br>';
 				for (j in obj[i]) {
 					switch (j) {
 						case 'Range':
@@ -200,19 +201,20 @@ function calcDiffValue () {
 			tmpval = parseFloat(obj[i].dataset[j]);
 			switch (j) {
 				case 'life':
-					obj[i].innerHTML = tmpval * (1 + (pdata[pidx][2] * pval) + (ddata[0][2] * d));
+					obj[i].innerHTML = (tmpval * (1 + (pdata[pidx][2] * pval) + (ddata[0][2] * d))).toFixed(0);
 					break;
 				case 'speed':
-					obj[i].innerHTML = (tmpval + (pdata[pidx][0] * pval)) * (1 + (ddata[0][0] * d));
+					obj[i].innerHTML = parseFloat(((tmpval + (pdata[pidx][0] * pval)) * (1 + (ddata[0][0] * d))).toFixed(4));
 					break;
 				case 'armor':
-					obj[i].innerHTML = tmpval + (ddata[0][3] * d);
+					obj[i].innerHTML = parseFloat((tmpval + (ddata[0][3] * d)).toFixed(2));
 					break;
 				case 'damage':
 					tmpval2 = 1 + (pdata[pidx][1] * pval) + (ddata[0][1] * d);
-					obj[i].innerHTML = (tmpval * tmpval2).toString() + '-' + ((tmpval * tmpval2) + (parseFloat(obj[i].dataset['random']) * tmpval2)).toString();
+					obj[i].innerHTML = parseFloat((tmpval * tmpval2).toFixed(2)) + '-' + parseFloat(((tmpval * tmpval2) + (parseFloat(obj[i].dataset['random']) * tmpval2)).toFixed(2));
 					break;
 			}
 		}
 	}
 }
+
