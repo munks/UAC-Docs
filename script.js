@@ -214,7 +214,7 @@ function calcDiffValue () {
 	let tmpval;
 	let tmpval2;
 	
-	if (!view.className) { console.log('true'); return; }
+	if (!view.className) { return; }
 	
 	if (p <= 3) {
 		pval = 4 - p;
