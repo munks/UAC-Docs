@@ -114,6 +114,7 @@ function getData (data) {
 	let tmp;
 	let t1;
 	let cond;
+	let cnt;
 	
 	switch (c[0]) {
 		case 'UndeadT1':
@@ -132,6 +133,8 @@ function getData (data) {
 	}
 	text += '<br>';
 	
+	cnt = 0;
+	
 	for (i in obj) {
 		tmp = txtobj[c[0]];
 		switch (i) {
@@ -139,14 +142,29 @@ function getData (data) {
 			case 'Ranged':
 			case 'Spell':
 			case 'AttackSpeed':
-				text += txtobj[i] + ': ' + obj[i].toString() + '%<br>';
+				text += txtobj[i] + ': ' + ((obj[i] > 0) ? '+' : '') + obj[i].toString() + '%<br>';
+				break;
+			case 'RangedTaken':
+			case 'SpellTaken':
+			case 'MeleeTaken':
+			case 'DamageTaken':
+				text += txtobj[i] + ': ' + ((obj[i][0] > 0) ? '+' : '') + obj[i][0].toString() + '%';
+				if (obj[i][1] < 100) {
+					text += ' (' + obj[i][1].toString() + '% ' + txtobj.Chance + ')';
+				}
+				text += '<br>';
 				break;
 			case 'RangeBonus':
-			case 'EnergyRegen':
-				text += txtobj[i] + ': ' + obj[i].toString() + '<br>';
+			case 'EnergyRegenBonus':
+			case 'MoveSpeedBonus':
+			case 'LifeArmorBonus':
+			case 'ShieldArmorBonus':
+			case 'ShieldRegenBonus':
+			case 'ShieldBonus':
+				text += txtobj[i] + ': ' + ((obj[i] > 0) ? '+' : '') + obj[i].toString() + '<br>';
 				break;
 			case 'Special':
-				text += '<br>' + txtobj[c[0]][c[1] + 'Special'] + '<br>';
+				text += ((cnt > 0) ? '<br>' : '') + txtobj[c[0]][c[1] + 'Special'] + '<br>';
 				break;
 			case 'Type':
 				tmp = txtobj;
@@ -166,10 +184,16 @@ function getData (data) {
 				}
 				text += '<br>';
 				break;
+			case 'ActiveEffect':
+				text += ((cnt > 0) ? '<br>' : '') + '[' + txtobj[i] + ']<br>';
+				text += txtobj[c[0]][obj[i][0]] + ': ' + txtobj[c[0]][obj[i][0] + 'Tip'] + '<br>';
+				text += txtobj.Duration + ': ' + obj[i][1].toString() + txtobj.Second + '<br>';
+				text += txtobj.Cooldown + ': ' + obj[i][2].toString() + txtobj.Second + '<br>';
+				break;
 			//On Unit
 			case 'Life':
 			case 'Speed':
-			case 'Armor':
+			case 'LifeArmor':
 				text += txtobj[i];
 				text += ': <span id="' + i + '" data-' + i.toLowerCase() + '="' + obj[i].toString() + '">'
 				text += obj[i].toString();
@@ -209,6 +233,7 @@ function getData (data) {
 				}
 				break;
 		}
+		cnt++;
 	}
 	view.innerHTML = text;
 	calcDiffValue();
@@ -247,9 +272,9 @@ function calcDiffValue () {
 		obj.innerHTML = parseFloat(((tmpval + (pdata[pidx][0] * pval)) * (1 + (ddata[didx][0] * d))).toFixed(4));
 	}
 
-	obj = document.getElementById('Armor');
+	obj = document.getElementById('LifeArmor');
 	if (obj) {
-		tmpval = parseFloat(obj.dataset['armor']);
+		tmpval = parseFloat(obj.dataset['lifearmor']);
 		obj.innerHTML = parseFloat((tmpval + (ddata[didx][3] * d)).toFixed(2));
 	}
 

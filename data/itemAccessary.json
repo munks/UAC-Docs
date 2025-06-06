@@ -56,7 +56,7 @@ itemAccessary = {
 				"Type": "All"
 			},
 			"KineticIntegrator": {
-				"EnergyRegen": 1.25,
+				"EnergyRegenBonus": 1.25,
 				"Type": "All"
 			}
 		}

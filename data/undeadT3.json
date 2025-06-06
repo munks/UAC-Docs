@@ -4,7 +4,7 @@ undeadT3 = {
 			"Drowned": {
 				"Life": 165,
 				"Speed": 2.6015,
-				"Armor": 0,
+				"LifeArmor": 0,
 				"Behavior": "CreepSkin",
 				"Weapon": {
 					"Name": "DrownedClaws",

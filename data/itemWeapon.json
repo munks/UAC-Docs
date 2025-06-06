@@ -2,6 +2,8 @@ itemWeapon = {
 	"data": {
 		"Item_Weapon": {
 			"S41RipSAW": {
+				"Ranged": 20,
+				"Special": true
 			},
 			"SLR1": {
 			},

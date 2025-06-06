@@ -2,22 +2,52 @@ itemArmor = {
 	"data": {
 		"Item_Armor": {
 			"AOS": {
+				"MoveSpeedBonus": 0.039,
+				"LifeArmorBonus": 5,
+				"ActiveEffect": ["ActiveCamouflage", 12, 35]
 			},
 			"CombatArmor": {
+				"LifeArmorBonus": 10,
+				"RangedTaken": [-25, 100]
 			},
 			"SecurityArmor": {
+				"LifeArmorBonus": 4,
+				"RangedTaken": [-16, 100],
+				"SpellTaken": [-16, 100]
 			},
 			"BioSuit": {
+				"Special": true
 			},
 			"ShieldGenerator": {
+				"ShieldArmorBonus": 10,
+				"ShieldBonus": 100,
+				"ShieldRegenBonus": 10,
+				"ActiveEffect": ["PlasmaBubble", 7, 60]
 			},
 			"KevlarBodyArmor": {
+				"LifeArmorBonus": 5,
+				"ShieldBonus": 50,
+				"ShieldRegenBonus": 2
 			},
 			"OPA": {
+				"MoveSpeedBonus": 0.0507,
+				"LifeArmorBonus": 6,
+				"ShieldBonus": 35,
+				"ShieldRegenBonus": 2,
+				"DamageTaken": [-40, 70]
 			},
 			"SPCS": {
+				"MoveSpeedBonus": -0.1015,
+				"LifeArmorBonus": 12,
+				"ShieldBonus": 75,
+				"ShieldRegenBonus": 2,
+				"Special": true
 			},
 			"SolarArmor": {
+				"LifeArmorBonus": 5,
+				"ShieldBonus": 30,
+				"ShieldRegenBonus": 2,
+				"EnergyRegenBonus": 0.5976
 			}
 		}
 	}
