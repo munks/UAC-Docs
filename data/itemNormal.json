@@ -1,0 +1,70 @@
+itemNormal = {
+	"data": {
+		"Item": {
+			"HydrogenCell": {
+			},
+			"PlasmaGrenadeItem": {
+			},
+			"AntiVenomShot": {
+			},
+			"CROWSVKit": {
+			},
+			"RCXDItem": {
+			},
+			"StrafeDesignator": {
+			},
+			"MRLRocket": {
+			},
+			"ShockPaddles": {
+			},
+			"Binoculars": {
+			},
+			"PlasmaMine": {
+			},
+			"C4ExplosiveDeviceItem": {
+			},
+			"Claymore": {
+			},
+			"LiftBoots": {
+			},
+			"MK79SentryGunPacked": {
+			},
+			"ExplosiveCharge": {
+			},
+			"FirstAidKit": {
+			},
+			"MRL": {
+			},
+			"MGL": {
+			},
+			"40mmGrenade": {
+			},
+			"FlareGun": {
+			},
+			"SmokeGrenade": {
+			},
+			"GroundFlare": {
+			},
+			"MuscleRelaxant": {
+			},
+			"EnergyCell": {
+			},
+			"MK44SentryGunPacked": {
+			},
+			"Flashlight": {
+			},
+			"Magazines": {
+			},
+			"FragGrenade": {
+			},
+			"AmmoCase": {
+			},
+			"QuikClot": {
+			},
+			"MK44SentryGun2": {
+			},
+			"ATMineItem": {
+			}
+		}
+	}
+}

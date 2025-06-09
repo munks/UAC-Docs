@@ -35,6 +35,7 @@ window.onload = function () {
 							itemAccessary.data,
 							itemArmor.data,
 							itemWeapon.data,
+							itemNormal.data,
 							itemSpecial.data,
 							explosive.data,
 							undeadT3.data,
@@ -111,10 +112,8 @@ function getData (data) {
 	let idx;
 	let obj = storage.data[c[0]][c[1]];
 	let txtobj = storage[lang];
-	let tmp;
 	let t1;
 	let cond;
-	let cnt;
 	
 	switch (c[0]) {
 		case 'UndeadT1':
@@ -133,15 +132,26 @@ function getData (data) {
 	}
 	text += '<br>';
 	
-	cnt = 0;
+	text += dataLoop(obj, txtobj, c, '');
+	
+	view.innerHTML = text;
+	calcDiffValue();
+}
+function dataLoop (obj, txtobj, c, pre) {
+	let tmp;
+	let cnt = 0;
+	let text = '';
 	
 	for (i in obj) {
+		text += pre;
 		tmp = txtobj[c[0]];
 		switch (i) {
 			//On Item
-			case 'Ranged':
-			case 'Spell':
-			case 'AttackSpeed':
+			case 'RangedDamageFractionBonus':
+			case 'SpellDamageFractionBonus':
+			case 'AttackSpeedBonus':
+			case 'AttributeBonusDamageArmored':
+			case 'CriticalChanceBonus':
 				text += txtobj[i] + ': ' + ((obj[i] > 0) ? '+' : '') + obj[i].toString() + '%<br>';
 				break;
 			case 'RangedTaken':
@@ -154,7 +164,10 @@ function getData (data) {
 				}
 				text += '<br>';
 				break;
-			case 'RangeBonus':
+			case 'RangedDamageBonus':
+			case 'SpellDamageBonus':
+			case 'WeaponRangeBonus':
+			case 'SightBonus':
 			case 'EnergyRegenBonus':
 			case 'MoveSpeedBonus':
 			case 'LifeArmorBonus':
@@ -164,7 +177,7 @@ function getData (data) {
 				text += txtobj[i] + ': ' + ((obj[i] > 0) ? '+' : '') + obj[i].toString() + '<br>';
 				break;
 			case 'Special':
-				text += ((cnt > 0) ? '<br>' : '') + txtobj[c[0]][c[1] + 'Special'] + '<br>';
+				text += txtobj[c[0]][c[1] + 'Special'] + '<br>';
 				break;
 			case 'Type':
 				tmp = txtobj;
@@ -189,6 +202,13 @@ function getData (data) {
 				text += txtobj[c[0]][obj[i][0]] + ': ' + txtobj[c[0]][obj[i][0] + 'Tip'] + '<br>';
 				text += txtobj.Duration + ': ' + obj[i][1].toString() + txtobj.Second + '<br>';
 				text += txtobj.Cooldown + ': ' + obj[i][2].toString() + txtobj.Second + '<br>';
+				break;
+			case 'Detector':
+				text += ((cnt > 0) ? '<br>' : '') + txtobj[i] + '<br>';
+				break;
+			case 'AdditionalEffect':
+				text += ((cnt > 0) ? '<br>' : '') + '[' + txtobj[c[0]][c[1] + 'Additional'] + ']<br>';
+				text += dataLoop(obj[i], txtobj, c, '-');
 				break;
 			//On Unit
 			case 'Life':
@@ -235,8 +255,7 @@ function getData (data) {
 		}
 		cnt++;
 	}
-	view.innerHTML = text;
-	calcDiffValue();
+	return text;
 }
 
 function calcDiffValue () {

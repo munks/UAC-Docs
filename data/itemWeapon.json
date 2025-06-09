@@ -2,26 +2,68 @@ itemWeapon = {
 	"data": {
 		"Item_Weapon": {
 			"S41RipSAW": {
-				"Ranged": 20,
-				"Special": true
+				"RangedDamageFractionBonus": 20,
+				"Special": true,
+				"Type": "HMG"
 			},
 			"SLR1": {
+				"SpellDamageBonus": 0.8,
+				"Special": true,
+				"Type": "LaserRifle"
 			},
 			"XM35MAR": {
+				"AttackSpeedBonus": 16,
+				"RangedDamageFractionBonus": 20,
+				"Type": "GL"
 			},
 			"StynerBR2": {
+				"RangedDamageFractionBonus": 20,
+				"WeaponRangeBonus": 2,
+				"AttackSpeedBonus": -10,
+				"Type": "Rifle"
 			},
 			"Mk53OCSW": {
+				"SpellDamageFractionBonus": 25,
+				"AttributeBonusDamageArmored": 30,
+				"WeaponRangeBonus": 4,
+				"Type": "GL"
 			},
 			"StynerSPR": {
+				"RangedDamageFractionBonus": 18,
+				"WeaponRangeBonus": 1,
+				"SightBonus": 1,
+				"Detector": true,
+				"Type": "Rifle"
 			},
 			"XM88bPhasedPlasmaRifle": {
+				"RangedDamageFractionBonus": 85,
+				"SpellDamageBonus": 16,
+				"WeaponRangeBonus": 5,
+				"AttackSpeedBonus": -35,
+				"Special": true,
+				"Type": "Plasma"
 			},
 			"AS50Custom": {
+				"RangedDamageFractionBonus": 15,
+				"WeaponRangeBonus": 2,
+				"CriticalChanceBonus": 5,
+				"AdditionalEffect": {
+					"RangedDamageFractionBonus": 5,
+					"WeaponRangeBonus": 2,
+					"Special": true
+				},
+				"Type": "AMR"
 			},
 			"D20LaserRifle": {
+				"SpellDamageBonus": 1,
+				"Special": true,
+				"Type": "LaserRifle"
 			},
 			"M1014": {
+				"RangedDamageFractionBonus": 23,
+				"WeaponRangeBonus": 2,
+				"MoveSpeedBonus": 0.0585,
+				"Type": "Shotgun"
 			},
 			"PR34E": {
 			},
