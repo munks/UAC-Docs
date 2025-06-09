@@ -10,7 +10,7 @@ koKR = {
 		"LaserRifle": "레이저 소총",
 		"HMG": "중기관총",
 		"AMR": "대물 소총",
-		"SR": "저격 소총",
+		"SniperRifle": "저격 소총",
 		"RangedDamageBonus": "공격력",
 		"RangedDamageFractionBonus": "공격력",
 		"RangedTaken": "받는 원거리 피해",
