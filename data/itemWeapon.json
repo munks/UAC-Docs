@@ -66,10 +66,23 @@ itemWeapon = {
 				"Type": "Shotgun"
 			},
 			"PR34E": {
+				"RangedDamageFractionBonus": 20,
+				"MoveSpeedBonus": 0.0507,
+				"EnergyRegenBonus": 0.5,
+				"Type": "Plasma"
 			},
 			"PR42C": {
+				"RangedDamageFractionBonus": 30,
+				"AttackSpeedBonus": 20,
+				"WeaponRangeBonus": 1,
+				"MoveSpeedBonus": -0.0781,
+				"ActiveEffect": ["AutomaticModePlasma", 10, 30],
+				"Type": "Plasma"
 			},
 			"M210SWS": {
+				"RangedDamageFractionBonus": 10,
+				"Special": true,
+				"Type": "SniperRifle"
 			},
 			"AA12": {
 			},
