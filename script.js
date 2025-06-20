@@ -152,6 +152,7 @@ function dataLoop (obj, txtobj, c, pre) {
 			case 'AttackSpeedBonus':
 			case 'AttributeBonusDamageArmored':
 			case 'CriticalChanceBonus':
+			case 'ReloadTimeBonus':
 				text += txtobj[i] + ': ' + ((obj[i] > 0) ? '+' : '') + obj[i].toString() + '%<br>';
 				break;
 			case 'RangedTaken':
@@ -198,10 +199,20 @@ function dataLoop (obj, txtobj, c, pre) {
 				text += '<br>';
 				break;
 			case 'ActiveEffect':
-				text += ((cnt > 0) ? '<br>' : '') + '[' + txtobj[i] + ']<br>';
-				text += txtobj[c[0]][obj[i][0]] + ': ' + txtobj[c[0]][obj[i][0] + 'Tip'] + '<br>';
-				text += txtobj.Duration + ': ' + obj[i][1].toString() + txtobj.Second + '<br>';
-				text += txtobj.Cooldown + ': ' + obj[i][2].toString() + txtobj.Second + '<br>';
+				text += ((cnt > 0) ? '<br>' : '') + '[' + txtobj[i] + '/' + txtobj[obj[i][1]] + ']<br>';
+				text += txtobj.ActiveEffectText[obj[i][0]] + ': ' + txtobj.ActiveEffectText[obj[i][0] + 'Tip'] + '<br>';
+				switch (obj[i][1]) {
+					case 'Behavior':
+						text += (obj[i][2] != 0) ? (txtobj.Duration + ': ' + obj[i][2].toString() + txtobj.Second + '<br>') : '';
+						text += (obj[i][3] != 0) ? (txtobj.Cooldown + ': ' + obj[i][3].toString() + txtobj.Second + '<br>') : '';
+						break;
+					case 'AbilTarget':
+						text += (obj[i][2] != 0) ? (txtobj.Cooldown + ': ' + obj[i][2].toString() + txtobj.Second + '<br>') : '';
+						text += (obj[i][3] != 0) ? (txtobj.Charges + ': ' + obj[i][3].toString() + txtobj.Count + '<br>') : '';
+						text += (obj[i][4] != 0) ? (txtobj.Range + ': ' + obj[i][4].toString() + '<br>') : '';
+						text += (obj[i][5] != 0) ? (txtobj.PrepTime + ': ' + obj[i][5].toString() + txtobj.Second + '<br>') : '';
+						break;
+				}
 				break;
 			case 'Detector':
 				text += ((cnt > 0) ? '<br>' : '') + txtobj[i] + '<br>';
@@ -223,11 +234,11 @@ function dataLoop (obj, txtobj, c, pre) {
 				text += '<br>';
 				if (Array.isArray(obj[i])) {
 					for (t in obj[i]) {
-						text += txtobj[c[0]][obj[i][t]] + ': ' + txtobj[c[0]][obj[i][t] + 'Tip'] + '<br>';
+						text += txtobj.BehaviorText[obj[i][t]] + ': ' + txtobj.BehaviorText[obj[i][t] + 'Tip'] + '<br>';
 						idx++;
 					}
 				} else {
-					text += txtobj[c[0]][obj[i]] + ': ' + txtobj[c[0]][obj[i] + 'Tip'] + '<br>';
+					text += txtobj.BehaviorText[obj[i]] + ': ' + txtobj.BehaviorText[obj[i] + 'Tip'] + '<br>';
 				}
 				break;
 			case 'Weapon':

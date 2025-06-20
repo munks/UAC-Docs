@@ -2,12 +2,14 @@ koKR = {
 	"koKR": {
 		"DiffTip": "난이도 값을 설정합니다.\n캠페인: 1~5, 생존/클래식 생존: 3, PMC: 2\n보스모드: 4, 인베이전: 4, 루나틱: 1~10",
 		"Shotgun": "산탄총",
+		"MG": "기관총",
 		"Rifles": "소총류",
 		"Rifle": "돌격 소총",
 		"Plasma": "플라스마 소총",
 		"Flamethrower": "화염방사기",
 		"GL": "유탄발사기",
 		"LaserRifle": "레이저 소총",
+		"DMR": "지정사수 소총",
 		"HMG": "중기관총",
 		"AMR": "대물 소총",
 		"SniperRifle": "저격 소총",
@@ -36,6 +38,7 @@ koKR = {
 		"ShieldArmorBonus": "보호막 방어력",
 		"ShieldBonus": "보호막",
 		"ShieldRegenBonus": "보호막 재생",
+		"ReloadTimeBonus": "재장전/총기 수리 시간",
 		"Type": "장착 가능",
 		"All": "제한 없음",
 		"Kind": "동시 사용 불가",
@@ -47,8 +50,29 @@ koKR = {
 		"ActiveEffect": "사용 효과",
 		"Duration": "지속 시간",
 		"Cooldown": "재사용 대기시간",
+		"Charges": "충전 횟수",
+		"Count": "회",
+		"PrepTime": "시전 시간",
 		"Second": "초",
 		"Chance": "확률",
+		"Behavior": "버프",
+		"AbilTarget": "대상",
+		"ActiveEffectText": {
+			"ActiveCamouflage": "광학 능동 위장",
+			"ActiveCamouflageTip": "스스로 위장해서 은폐 상태가 되고 15% 확률로 공격을 회피합니다.",
+			"PlasmaBubble": "플라스마 거품",
+			"PlasmaBubbleTip": "보호막 +300, 보호막 방어력 +5",
+			"AutomaticModePlasma": "조정간 자동",
+			"AutomaticModePlasmaTip": "공격 속도 +100%",
+			"AutomaticModeShotgun": "조정간 자동",
+			"AutomaticModeShotgunTip": "공격 속도 +100%",
+			"MGLItem": "MGL",
+			"MGLItemTip": "목표 지점에 유탄을 발사해서 550 피해를 줍니다."
+		},
+		"BehaviorText": {
+			"CreepSkin": "점막 피부",
+			"CreepSkinTip": "점막 위에 있는 동안 보호막이 175, 보호막 재생 속도가 100 증가합니다."
+		},
 		"Item_Accessary": {
 			"Name": "아이템/액세서리",
 			"Birdshot": "버드샷",
@@ -67,15 +91,11 @@ koKR = {
 		"Item_Armor": {
 			"Name": "아이템/방어구",
 			"AOS": "AOS",
-			"ActiveCamouflage": "광학 능동 위장",
-			"ActiveCamouflageTip": "스스로 위장해서 은폐 상태가 되고 15% 확률로 공격을 회피합니다.",
 			"CombatArmor": "전투 방어구",
 			"SecurityArmor": "경비 방어구",
 			"BioSuit": "생화학 전투복",
 			"BioSuitSpecial": "치유의 오라 효과 두배<br>체력 55% 이하일 시 체력 재생 +1.5<br>산성, 방사능, 독, 감염 유형 질병 보호, 늪지대 둔화 면역",
 			"ShieldGenerator": "보호막 생성기",
-			"PlasmaBubble": "플라스마 거품",
-			"PlasmaBubbleTip": "보호막 +300, 보호막 방어력 +5",
 			"KevlarBodyArmor": "케블라 방탄복",
 			"OPA": "OPA",
 			"SPCS": "SPCS",
@@ -102,35 +122,52 @@ koKR = {
 			"M1014": "M1014",
 			"PR34E": "PR34-E",
 			"PR42C": "PR42-C",
-			"AutomaticModePlasma": "조정간 자동",
-			"AutomaticModePlasmaTip": "공격 속도 +100%",
 			"M210SWS": "M210 저격용 화기 체제",
 			"M210SWSSpecial": "최소 공격력 + 20",
 			"AA12": "AA-12",
 			"ATLASX50": "ATLAS-X50",
+			"ATLASX50Special": "조정간 점사 시 3발 대신 4발 발사",
 			"Inferno": "인페르노",
 			"M92Torrent": "M92 토렌트",
 			"IPR2": "IPR-2",
 			"M135Minigun": "M135 미니건",
+			"M135MinigunSpecial": "점사 한계 무시",
 			"M241MMG": "M241 중기관총",
+			"M241MMGSpecial": "점사 한계 +3",
 			"M5MAR": "M5 다목적 소총",
 			"SOFAR": "SOF-AR",
 			"USMCR": "US MCR",
 			"IDMR2": "IDMR-2",
 			"ISS7": "ISS-7",
 			"M22BS": "M22 점사 산탄총",
+			"M22BSSpecial": "공격 시 2발 발사합니다.",
 			"M41SAW": "M41 분대지원화기",
+			"M41SAWSpecial": "점사 정지 시간 -0.15초",
 			"M79Flamethrower": "M79 화염방사기",
 			"HK42": "HK42",
-			"XR900": "XR-900"
+			"XR900": "XR-900",
+			"XR900Special": "속사 중엔 사거리 페널티가 적용되지 않습니다."
+		},
+		"Item": {
+			"Name": "아이템"
+		},
+		"Item_Special": {
+			"Name": "아이템/특수"
+		},
+		"Explosive": {
+			"Name": "폭발물"
 		},
 		"UndeadT3": {
 			"Name": "언데드/3티어",
 			"Drowned": "드라운드",
 			"DrownedTip": "강가나 늪지대에서 발견되는 감염자로 중-소규모로 무리를 지어 다닙니다. 점막 위에 있으면 보호막을 얻습니다.",
-			"CreepSkin": "점막 피부",
-			"CreepSkinTip": "점막 위에 있는 동안 보호막이 175, 보호막 재생 속도가 100 증가합니다.",
 			"DrownedClaws": "드라운드 손톱"
+		},
+		"UndeadT2": {
+			"Name": "언데드/2티어"
+		},
+		"UndeadT1": {
+			"Name": "언데드/1티어"
 		}
 	}
 };

@@ -76,7 +76,7 @@ itemWeapon = {
 				"AttackSpeedBonus": 20,
 				"WeaponRangeBonus": 1,
 				"MoveSpeedBonus": -0.0781,
-				"ActiveEffect": ["AutomaticModePlasma", 10, 30],
+				"ActiveEffect": ["AutomaticModePlasma", "Behavior", 10, 30],
 				"Type": "Plasma"
 			},
 			"M210SWS": {
@@ -85,38 +85,107 @@ itemWeapon = {
 				"Type": "SniperRifle"
 			},
 			"AA12": {
+				"AttackSpeedBonus": 40,
+				"ReloadTimeBonus": -15,
+				"ActiveEffect": ["AutomaticModeShotgun", "Behavior", 10, 60],
+				"Type": "Shotgun"
 			},
 			"ATLASX50": {
+				"RangedDamageFractionBonus": 12,
+				"AttackSpeedBonus": 25,
+				"MoveSpeedBonus": 0.0507,
+				"Special": true,
+				"Type": "Rifle"
 			},
 			"Inferno": {
+				"SpellDamageFractionBonus": 80,
+				"AttackSpeedBonus": -10,
+				"Type": "Flamethrower"
 			},
 			"M92Torrent": {
+				"RangedDamageFractionBonus": 120,
+				"WeaponRangeBonus": 5,
+				"CriticalChanceBonus": 5,
+				"AttackSpeedBonus": -50,
+				"Type": "DMR"
 			},
 			"IPR2": {
+				"AttackSpeedBonus": 40,
+				"Type": "Plasma"
 			},
 			"M135Minigun": {
+				"AttributeBonusDamageArmored": 20,
+				"AttackSpeedBonus": 40,
+				"Special": true,
+				"MoveSpeedBonus": -0.2304,
+				"Type": "MG"
 			},
 			"M241MMG": {
+				"RangedDamageFractionBonus": 22,
+				"WeaponRangeBonus": 2,
+				"Special": true,
+				"Type": "MG"
 			},
 			"M5MAR": {
+				"RangedDamageFractionBonus": 12,
+				"WeaponRangeBonus": 2,
+				"ActiveEffect": ["MGLItem", "AbilTarget", 3, 10, 35, 0],
+				"Type": "Rifle"
 			},
 			"SOFAR": {
+				"RangedDamageFractionBonus": 20,
+				"WeaponRangeBonus": 3,
+				"ReloadTimeBonus": -15,
+				"CriticalChanceBonus": 7.5,
+				"Type": "Rifle"
 			},
 			"USMCR": {
+				"AttackSpeedBonus": 40,
+				"ReloadTimeBonus": -15,
+				"Type": "Rifle"
 			},
 			"IDMR2": {
+				"RangedDamageFractionBonus": 18,
+				"WeaponRangeBonus": 2,
+				"ReloadTimeBonus": -15,
+				"Type": "DMR"
 			},
 			"ISS7": {
+				"AttackSpeedBonus": 15,
+				"MoveSpeedBonus": 0.0312,
+				"Type": "Shotgun"
 			},
 			"M22BS": {
+				"RangedDamageFractionBonus": 15,
+				"Special": true,
+				"AttackSpeedBonus": -45,
+				"Type": "Shotgun"
 			},
 			"M41SAW": {
+				"AttackSpeedBonus": 18,
+				"MoveSpeedBonus": 0.0781,
+				"ReloadTimeBonus": -15,
+				"Special": true,
+				"Type": "MG"
 			},
 			"M79Flamethrower": {
+				"SpellDamageBonus": 1,
+				"AttackSpeedBonus": 10,
+				"WeaponRangeBonus": 1,
+				"Type": "Flamethrower"
 			},
 			"HK42": {
+				"AttackSpeedBonus": 15,
+				"MoveSpeedBonus": 0.0507,
+				"Type": "Rifle"
 			},
 			"XR900": {
+				"RangedDamageFractionBonus": 25,
+				"AttackSpeedBonus": 30,
+				"ReloadTimeBonus": -20,
+				"WeaponRangeBonus": -4,
+				"Special": true,
+				"Type": "DMR"
 			}
 		}
 	}
