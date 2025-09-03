@@ -2,34 +2,40 @@ itemNormal = {
 	"data": {
 		"Item": {
 			"HydrogenCell": {
+				"ActiveEffect": ["Energy", "Consumable", 10, 95]
 			},
 			"PlasmaGrenadeItem": {
+				"ActiveEffect": ["Throwable", "Consumable", 300, ["Armored", 30]],
+				"Special": true
 			},
 			"AntiVenomShot": {
+				"ActiveEffect": ["LifeEnergy", "Consumable", 15, 150, 60],
+				"Special": true
 			},
 			"CROWSVKit": {
-			},
-			"RCXDItem": {
+				"ActiveEffect": ["", "Consumable"],
+				"Special": true
 			},
 			"StrafeDesignator": {
+				"ActiveEffect": ["", "Consumable"],
+				"Special": true
 			},
 			"MRLRocket": {
+				"ActiveEffect": ["Rearm", "Consumable", "MRL"]
 			},
 			"ShockPaddles": {
+				"ActiveEffect": ["", "Consumable"],
+				"Special": true
 			},
 			"Binoculars": {
-			},
-			"PlasmaMine": {
-			},
-			"C4ExplosiveDeviceItem": {
-			},
-			"Claymore": {
+				"ActiveEffect": ["Binoculars", "AbilTarget", 20, 0, 44, 0],
 			},
 			"LiftBoots": {
+				"ActiveEffect": ["LiftBoots", "AbilTarget", 50, 0, 20, 0],
+			},
+			"MK44SentryGunPacked": {
 			},
 			"MK79SentryGunPacked": {
-			},
-			"ExplosiveCharge": {
 			},
 			"FirstAidKit": {
 			},
@@ -49,8 +55,6 @@ itemNormal = {
 			},
 			"EnergyCell": {
 			},
-			"MK44SentryGunPacked": {
-			},
 			"Flashlight": {
 			},
 			"Magazines": {
@@ -60,10 +64,6 @@ itemNormal = {
 			"AmmoCase": {
 			},
 			"QuikClot": {
-			},
-			"MK44SentryGun2": {
-			},
-			"ATMineItem": {
 			}
 		}
 	}

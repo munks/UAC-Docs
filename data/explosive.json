@@ -1,19 +1,21 @@
 const explosive = {
 	"data": {
 		"Explosive": {
-			"RCXD": {
+			"RCXDItem": {
+			},
+			"PlasmaMine": {
 			},
 			"M200SatchelCharge": {
 			},
-			"Claymore2": {
+			"Claymore": {
 			},
 			"ParalysisTrap": {
 			},
-			"C4ExplosiveDevice": {
+			"C4ExplosiveDeviceItem": {
 			},
-			"ExplosiveChargeUnit": {
+			"ExplosiveCharge": {
 			},
-			"ATMine": {
+			"ATMineItem": {
 			}
 		}
 	}

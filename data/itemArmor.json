@@ -4,7 +4,7 @@ itemArmor = {
 			"AOS": {
 				"MoveSpeedBonus": 0.039,
 				"LifeArmorBonus": 5,
-				"ActiveEffect": ["ActiveCamouflage", 12, 35]
+				"ActiveEffect": ["ActiveCamouflage", "Behavior", 12, 35]
 			},
 			"CombatArmor": {
 				"LifeArmorBonus": 10,
@@ -22,7 +22,7 @@ itemArmor = {
 				"ShieldArmorBonus": 10,
 				"ShieldBonus": 100,
 				"ShieldRegenBonus": 10,
-				"ActiveEffect": ["PlasmaBubble", 7, 60]
+				"ActiveEffect": ["PlasmaBubble", "Behavior", 7, 60]
 			},
 			"KevlarBodyArmor": {
 				"LifeArmorBonus": 5,

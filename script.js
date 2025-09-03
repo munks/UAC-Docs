@@ -36,8 +36,8 @@ window.onload = function () {
 							itemArmor.data,
 							itemWeapon.data,
 							itemNormal.data,
-							itemSpecial.data,
 							explosive.data,
+							itemSpecial.data,
 							undeadT3.data,
 							undeadT2.data,
 							undeadT1.data,
@@ -200,7 +200,8 @@ function dataLoop (obj, txtobj, c, pre) {
 				break;
 			case 'ActiveEffect':
 				text += ((cnt > 0) ? '<br>' : '') + '[' + txtobj[i] + '/' + txtobj[obj[i][1]] + ']<br>';
-				text += txtobj.ActiveEffectText[obj[i][0]] + ': ' + txtobj.ActiveEffectText[obj[i][0] + 'Tip'] + '<br>';
+				text += (obj[i][0] != '' && txtobj.ActiveEffectText[obj[i][0]] != null) ? txtobj.ActiveEffectText[obj[i][0]] + ': ' : '';
+				text += (obj[i][1] != 'Consumable') ? txtobj.ActiveEffectText[obj[i][0] + 'Tip'] + '<br>' : '';
 				switch (obj[i][1]) {
 					case 'Behavior':
 						text += (obj[i][2] != 0) ? (txtobj.Duration + ': ' + obj[i][2].toString() + txtobj.Second + '<br>') : '';
@@ -211,6 +212,21 @@ function dataLoop (obj, txtobj, c, pre) {
 						text += (obj[i][3] != 0) ? (txtobj.Charges + ': ' + obj[i][3].toString() + txtobj.Count + '<br>') : '';
 						text += (obj[i][4] != 0) ? (txtobj.Range + ': ' + obj[i][4].toString() + '<br>') : '';
 						text += (obj[i][5] != 0) ? (txtobj.PrepTime + ': ' + obj[i][5].toString() + txtobj.Second + '<br>') : '';
+						break;
+					case 'Consumable':
+						if (obj[i][0] != '') {
+							tmp = txtobj.ActiveEffectConsumeText[obj[i][0]];
+							tmp = tmp.replace('~A~', obj[i][2]);
+							if (!Array.isArray(obj[i][3])) {
+								tmp = tmp.replace('~B~', obj[i][3]);
+								tmp = tmp.replace('~C~', obj[i][4]);
+							} else {
+								text += tmp + '<br>';
+								tmp = txtobj.ActiveEffectConsumeText[obj[i][0] + 'Additional'];
+								tmp = tmp.replace('~A~', txtobj.Attributes[obj[i][3][0]]).replace('~B~', obj[i][3][1]);
+							}
+							text += tmp + '<br>';
+						}
 						break;
 				}
 				break;

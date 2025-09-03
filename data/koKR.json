@@ -57,7 +57,15 @@ koKR = {
 		"Chance": "확률",
 		"Behavior": "버프",
 		"AbilTarget": "대상",
+		"Consumable": "소모품",
+		"Attributes": {
+			"Armored": "중장갑"
+		},
 		"ActiveEffectText": {
+			"Throwable": "투척물",
+			"LifeEnergy": "체력/에너지 회복",
+			"Energy": "에너지 회복",
+			"Rearm": "재장전",
 			"ActiveCamouflage": "광학 능동 위장",
 			"ActiveCamouflageTip": "스스로 위장해서 은폐 상태가 되고 15% 확률로 공격을 회피합니다.",
 			"PlasmaBubble": "플라스마 거품",
@@ -67,7 +75,16 @@ koKR = {
 			"AutomaticModeShotgun": "조정간 자동",
 			"AutomaticModeShotgunTip": "공격 속도 +100%",
 			"MGLItem": "MGL",
-			"MGLItemTip": "목표 지점에 유탄을 발사해서 550 피해를 줍니다."
+			"MGLItemTip": "목표 지점에 유탄을 발사해서 550 피해를 줍니다.",
+			"BinocularsTip": "목표 지점의 시야를 8초간 확보합니다. 은폐 유닛 탐지가능.",
+			"LiftBootsTip": "목표 지점의 시야를 8초간 확보합니다. 은폐 유닛 탐지가능."
+		},
+		"ActiveEffectConsumeText": {
+			"Energy": "~A~초 동안 ~B~ 에너지를 회복합니다.",
+			"LifeEnergy": "~A~초 동안 ~B~ 체력과 ~C~ 에너지를 회복합니다.",
+			"Throwable": "대상 지점에 ~A~ 피해를 줍니다.",
+			"ThrowableAdditional": "*~A~ 대상 피해 + ~B~%",
+			"Rearm": "~A~을/를 장전합니다."
 		},
 		"BehaviorText": {
 			"CreepSkin": "점막 피부",
@@ -149,13 +166,49 @@ koKR = {
 			"XR900Special": "속사 중엔 사거리 페널티가 적용되지 않습니다."
 		},
 		"Item": {
-			"Name": "아이템"
+			"Name": "아이템",
+			"HydrogenCell": "수소 전지",
+			"PlasmaGrenadeItem": "플라스마 수류탄",
+			"PlasmaGrenadeItemSpecial": "폭발 후 8초 동안 지면을 불태워 200의 화상 피해를 주며 유닛의 이동 속도를 30% 감소시킵니다.",
+			"AntiVenomShot": "해독제",
+			"AntiVenomShotSpecial": "독을 치료합니다.",
+			"CROWSVKit": "CROWS V 킷",
+			"CROWSVKitSpecial": "쌍 경기관총을 달 수 있는 회전포탑을 벙커에 설치합니다.",
+			"StrafeDesignator": "공습 지시기",
+			"StrafeDesignatorSpecial": "A-10을 호출하여 지상의 적을 사격합니다.",
+			"MRLRocket": "MRL 로켓",
+			"ShockPaddles": "전기 충격기",
+			"ShockPaddlesSpecial": "전투 의무관이나 항공구조사를 부활시킵니다.",
+			"Binoculars": "쌍안경",
+			"LiftBoots": "입체기동신발",
+			"MK44SentryGunPacked": "포장된 MK44 자동 포탑",
+			"MK79SentryGunPacked": "포장된 MK79 자동 포탑",
+			"FirstAidKit": "구급 상자",
+			"MRL": "MRL",
+			"MGL": "MGL",
+			"40mmGrenade": "40mm 유탄",
+			"FlareGun": "조명총",
+			"SmokeGrenade": "연막탄",
+			"GroundFlare": "지상 조명탄",
+			"MuscleRelaxant": "근이완제",
+			"EnergyCell": "에너지 전지",
+			"Flashlight": "손전등",
+			"Magazines": "탄창",
+			"FragGrenade": "파편 수류탄",
+			"AmmoCase": "탄약 상자",
+			"QuikClot": "퀵 클롯",
 		},
 		"Item_Special": {
-			"Name": "아이템/특수"
+			"Name": "아이템/특수",
 		},
 		"Explosive": {
-			"Name": "폭발물"
+			"Name": "폭발물",
+			"RCXDItem": "RCXD",
+			"PlasmaMine": "플라스마 지뢰",
+			"C4ExplosiveDeviceItem": "C4 원격 기폭장치",
+			"Claymore": "클레이모어",
+			"ExplosiveCharge": "연쇄 폭약",
+			"ATMineItem": "대전차 지뢰"
 		},
 		"UndeadT3": {
 			"Name": "언데드/3티어",
